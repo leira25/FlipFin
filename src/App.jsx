@@ -14,7 +14,7 @@ function App() {
       <Header />
 
       {/* Main Content Area */}
-      <div className="flex flex-1 overflow-hidden">
+      <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
         {/* Left Sidebar */}
         <Sidebar />
 

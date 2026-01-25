@@ -1,5 +1,5 @@
 import React from "react";
-import { Search, Activity, BookOpen, Shield, Trophy, Eye, ChartPie, Plus } from "lucide-react";
+import { Search, Activity, BookOpen, Shield } from "lucide-react";
 
 const Header = () => {
   return (
@@ -19,17 +19,7 @@ const Header = () => {
           <input 
             type="text"
             placeholder="Search or paste CA..."
-            style={{
-              backgroundColor: 'var(--bg-popover)',
-              border: '1px solid var(--border-color)',
-              paddingLeft: '2.25rem',
-              height: '32px',
-              fontSize: '11px',
-              color: 'white',
-              borderRadius: '6px',
-              width: '100%',
-              outline: 'none'
-            }}
+            className="terminal-input"
           />
         </div>
       </div>
@@ -50,9 +40,9 @@ const Header = () => {
           </a>
         </nav>
 
-        <div className="h-8 w-[1px] bg-border mx-2 hidden sm:block"></div>
+        <div className="h-8 w-[1px] bg-border mx-2 hidden sm:block" style={{ backgroundColor: 'var(--border-color)' }}></div>
 
-        <div className="hidden sm:flex items-center gap-2 px-3 py-1 bg-popover rounded">
+        <div className="hidden sm:flex items-center gap-2 px-3 py-1 rounded" style={{ backgroundColor: 'var(--bg-popover)' }}>
           <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div>
           <span className="text-[10px] text-muted font-bold uppercase">SOL</span>
           <span className="text-xs font-bold text-white font-mono">$127.42</span>

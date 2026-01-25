@@ -21,20 +21,7 @@ const Sidebar = () => {
             <li key={link.name} style={{ padding: '0 0.5rem' }}>
               <a 
                 href={link.href}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.75rem',
-                  padding: '0.75rem 1rem',
-                  borderRadius: '6px',
-                  textDecoration: 'none',
-                  fontSize: '11px',
-                  fontWeight: '600',
-                  transition: 'all 0.15s ease',
-                  backgroundColor: link.active ? 'rgba(2, 192, 118, 0.1)' : 'transparent',
-                  color: link.active ? 'var(--primary-green)' : 'var(--text-muted)'
-                }}
-                className="sidebar-link"
+                className={`sidebar-link ${link.active ? 'active' : ''}`}
               >
                 <link.icon className="w-4 h-4" />
                 <span>{link.name}</span>
@@ -45,15 +32,8 @@ const Sidebar = () => {
       </nav>
 
       <div style={{ padding: '1rem', borderTop: '1px solid var(--border-color)' }}>
-        <div style={{
-          padding: '0.75rem',
-          backgroundColor: 'var(--bg-popover)',
-          borderRadius: '6px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '0.5rem'
-        }}>
-          <div style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: 'var(--primary-green)' }} className="animate-pulse"></div>
+        <div className="status-badge">
+          <div className="status-dot animate-pulse"></div>
           <span style={{ fontSize: '9px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase' }}>System Status: Normal</span>
         </div>
       </div>
