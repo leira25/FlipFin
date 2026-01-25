@@ -1,67 +1,95 @@
 import React from 'react';
+import { Terminal, Code, Info, Zap } from 'lucide-react';
 
 const Commands = () => {
     return (
-        <section id="docs" className="py-20 md:py-28">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">FlipFin Documentation</h2>
+        <section id="docs" className="py-24 md:py-32 bg-background relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+            
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex flex-col md:flex-row items-center justify-between mb-20 gap-8">
+                    <div className="max-w-2xl">
+                        <h2 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter mb-6">Master the <span className="text-primary">Terminal</span></h2>
+                        <p className="text-muted-foreground text-lg font-medium leading-relaxed italic border-l-4 border-primary pl-6 py-2 bg-primary/5">
+                            "Speed is everything in the Solana ecosystem. Flip Finance gives you the edge with a streamlined command interface designed for precision."
+                        </p>
+                    </div>
+                    <div className="hidden lg:block">
+                        <Terminal size={120} className="text-primary opacity-10 animate-pulse" />
+                    </div>
+                </div>
 
-                <div className="space-y-16">
-                    <div className="bg-card-bg border border-gray-800 rounded-2xl p-8">
-                        <h3 className="text-3xl font-semibold mb-6">Getting Started</h3>
-                        <div className="space-y-4 text-gray-300">
-                            <p>FlipFin is your ultimate Solana trading terminal for catching the next 100x flips.</p>
-                            <ol className="list-decimal list-inside space-y-2">
-                                <li>Connect your Solana wallet (Phantom, Solflare, etc.)</li>
-                                <li>Browse live token launches and graduating tokens</li>
-                                <li>Use commands to buy, sell, and set alerts</li>
-                                <li>Track your PnL and portfolio performance</li>
-                            </ol>
+                <div className="grid lg:grid-cols-2 gap-12">
+                    <div className="bg-card border border-border rounded-lg overflow-hidden flex flex-col">
+                        <div className="p-4 border-b border-border bg-secondary/50 flex items-center justify-between">
+                            <div className="flex items-center gap-2">
+                                <Code size={16} className="text-primary" />
+                                <span className="text-[10px] font-black uppercase tracking-widest">Trading_Module.sh</span>
+                            </div>
+                            <div className="flex gap-1.5">
+                                <div className="w-2.5 h-2.5 rounded-full bg-border"></div>
+                                <div className="w-2.5 h-2.5 rounded-full bg-border"></div>
+                                <div className="w-2.5 h-2.5 rounded-full bg-primary/40"></div>
+                            </div>
+                        </div>
+                        <div className="p-8 space-y-6 flex-1">
+                            <h3 className="text-2xl font-black italic uppercase flex items-center gap-3">
+                                <Zap size={24} className="text-primary" /> Instant Execution
+                            </h3>
+                            <div className="space-y-4 font-data">
+                                <div className="group flex items-center justify-between p-3 bg-background border border-border rounded hover:border-primary/50 transition">
+                                    <code className="text-primary">/buy [token]</code>
+                                    <span className="text-[10px] text-muted-foreground uppercase opacity-0 group-hover:opacity-100 transition">Execute Buy</span>
+                                </div>
+                                <div className="group flex items-center justify-between p-3 bg-background border border-border rounded hover:border-primary/50 transition">
+                                    <code className="text-primary">/sell [token]</code>
+                                    <span className="text-[10px] text-muted-foreground uppercase opacity-0 group-hover:opacity-100 transition">Execute Sell</span>
+                                </div>
+                                <div className="group flex items-center justify-between p-3 bg-background border border-border rounded hover:border-primary/50 transition">
+                                    <code className="text-primary">/alert buy [token]</code>
+                                    <span className="text-[10px] text-muted-foreground uppercase opacity-0 group-hover:opacity-100 transition">Set Buy Trigger</span>
+                                </div>
+                                <div className="group flex items-center justify-between p-3 bg-background border border-border rounded hover:border-primary/50 transition">
+                                    <code className="text-primary">/pnl</code>
+                                    <span className="text-[10px] text-muted-foreground uppercase opacity-0 group-hover:opacity-100 transition">Fetch ROI</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="bg-card-bg border border-gray-800 rounded-2xl p-8">
-                        <h3 className="text-3xl font-semibold mb-6">Available Commands</h3>
-                        <div className="grid md:grid-cols-2 gap-8">
-                            <div>
-                                <h4 className="text-xl font-semibold mb-4">Trading Commands</h4>
-                                <ul className="space-y-3 text-gray-400">
-                                    <li><code className="bg-gray-800 px-2 py-1 rounded text-sm">/buy [token]</code> - Buy a token instantly</li>
-                                    <li><code className="bg-gray-800 px-2 py-1 rounded text-sm">/sell [token]</code> - Sell a token</li>
-                                    <li><code className="bg-gray-800 px-2 py-1 rounded text-sm">/alert buy [token]</code> - Set buy alert</li>
-                                    <li><code className="bg-gray-800 px-2 py-1 rounded text-sm">/alert sell [token]</code> - Set sell alert</li>
-                                    <li><code className="bg-gray-800 px-2 py-1 rounded text-sm">/portfolio</code> - View portfolio</li>
-                                    <li><code className="bg-gray-800 px-2 py-1 rounded text-sm">/pnl</code> - Check profit/loss</li>
-                                </ul>
+                    <div className="bg-card border border-border rounded-lg overflow-hidden flex flex-col">
+                        <div className="p-4 border-b border-border bg-secondary/50 flex items-center justify-between">
+                            <div className="flex items-center gap-2">
+                                <Info size={16} className="text-primary" />
+                                <span className="text-[10px] font-black uppercase tracking-widest">Intelligence_Feed.log</span>
                             </div>
-                            <div>
-                                <h4 className="text-xl font-semibold mb-4">Information Commands</h4>
-                                <ul className="space-y-3 text-gray-400">
-                                    <li><code className="bg-gray-800 px-2 py-1 rounded text-sm">/flow</code> - View real-time token flow</li>
-                                    <li><code className="bg-gray-800 px-2 py-1 rounded text-sm">/narratives</code> - Trending narratives</li>
-                                    <li><code className="bg-gray-800 px-2 py-1 rounded text-sm">/hype</code> - Social hype and mentions</li>
-                                    <li><code className="bg-gray-800 px-2 py-1 rounded text-sm">/tracker</code> - Full token tracker</li>
-                                    <li><code className="bg-gray-800 px-2 py-1 rounded text-sm">/graduation</code> - Tokens about to graduate</li>
-                                    <li><code className="bg-gray-800 px-2 py-1 rounded text-sm">/help</code> - Show all commands</li>
-                                </ul>
+                            <div className="flex gap-1.5">
+                                <div className="w-2.5 h-2.5 rounded-full bg-border"></div>
+                                <div className="w-2.5 h-2.5 rounded-full bg-border"></div>
+                                <div className="w-2.5 h-2.5 rounded-full bg-primary/40"></div>
                             </div>
                         </div>
-                    </div>
-
-                    <div className="bg-card-bg border border-gray-800 rounded-2xl p-8">
-                        <h3 className="text-3xl font-semibold mb-6">Features</h3>
-                        <div className="grid md:grid-cols-3 gap-6">
-                            <div>
-                                <h4 className="text-xl font-semibold mb-3 text-solana-green">Narratives</h4>
-                                <p className="text-gray-400">Stay ahead with trending stories and cultural momentum on Solana.</p>
-                            </div>
-                            <div>
-                                <h4 className="text-xl font-semibold mb-3 text-accent-yellow">Graduation Radar</h4>
-                                <p className="text-gray-400">Catch tokens 30-90 seconds before they hit Raydium DEX.</p>
-                            </div>
-                            <div>
-                                <h4 className="text-xl font-semibold mb-3 text-solana-purple">Portfolio Tracking</h4>
-                                <p className="text-gray-400">Real-time PnL tracking and performance analytics.</p>
+                        <div className="p-8 space-y-6 flex-1">
+                            <h3 className="text-2xl font-black italic uppercase flex items-center gap-3">
+                                <Terminal size={24} className="text-primary" /> Data Streams
+                            </h3>
+                            <div className="space-y-4 font-data">
+                                <div className="group flex items-center justify-between p-3 bg-background border border-border rounded hover:border-primary/50 transition">
+                                    <code className="text-primary">/flow</code>
+                                    <span className="text-[10px] text-muted-foreground uppercase opacity-0 group-hover:opacity-100 transition">Real-time Feed</span>
+                                </div>
+                                <div className="group flex items-center justify-between p-3 bg-background border border-border rounded hover:border-primary/50 transition">
+                                    <code className="text-primary">/narratives</code>
+                                    <span className="text-[10px] text-muted-foreground uppercase opacity-0 group-hover:opacity-100 transition">Trend Analysis</span>
+                                </div>
+                                <div className="group flex items-center justify-between p-3 bg-background border border-border rounded hover:border-primary/50 transition">
+                                    <code className="text-primary">/hype</code>
+                                    <span className="text-[10px] text-muted-foreground uppercase opacity-0 group-hover:opacity-100 transition">Social Pulse</span>
+                                </div>
+                                <div className="group flex items-center justify-between p-3 bg-background border border-border rounded hover:border-primary/50 transition">
+                                    <code className="text-primary">/graduation</code>
+                                    <span className="text-[10px] text-muted-foreground uppercase opacity-0 group-hover:opacity-100 transition">Raydium Radar</span>
+                                </div>
                             </div>
                         </div>
                     </div>
