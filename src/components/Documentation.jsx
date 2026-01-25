@@ -51,19 +51,39 @@ const Documentation = () => {
                             Execute trades with sub-40ms latency. Our private RPC nodes and Jito-integration bypass public congestion to ensure your transaction lands first in the block.
                         </p>
                     </div>
+
+                    {/* Phase 4 - New Automation & Perks */}
+                    <div className="token-card" style={{ height: '100%', border: '1px solid var(--ff-border)' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+                            <div className="feature-icon" style={{ width: '3rem', height: '3rem', fontSize: '1.5rem' }}>
+                                <Cpu size={20} />
+                            </div>
+                            <h3 style={{ fontWeight: '900', fontSize: '1.25rem', textTransform: 'uppercase', fontStyle: 'italic' }}>4. Advanced Automation</h3>
+                        </div>
+                        <p style={{ color: 'var(--ff-muted)', fontSize: '0.875rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
+                            Go beyond manual trading with Copy Trading and AI-powered Sniper Bots. Follow alpha-wallets automatically or capture new launches the moment liquidity is added.
+                        </p>
+                    </div>
                 </div>
 
                 <div style={{ marginTop: '4rem', padding: '2rem', backgroundColor: '#0d1117', border: '1px solid var(--ff-border)', borderRadius: '8px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
-                        <BarChart3 className="ff-text-primary" size={20} />
-                        <h3 style={{ fontWeight: '900', fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>4. Portfolio Management & Exit</h3>
+                        <Book className="ff-text-primary" size={20} />
+                        <h3 style={{ fontWeight: '900', fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Professional Solana Infrastructure</h3>
                     </div>
-                    <div className="ff-font-mono" style={{ backgroundColor: '#0b0e11', padding: '1.5rem', borderRadius: '4px', border: '1px solid #1e2329', overflowX: 'auto' }}>
-                        <div style={{ color: '#888', marginBottom: '0.5rem' }}>// Active Monitoring & Automated Exit Strategies</div>
-                        <div style={{ color: '#02c076' }}>{'>'} <span style={{ color: '#fff' }}>Monitoring SOL/TOKEN pool...</span></div>
-                        <div style={{ color: '#02c076' }}>{'>'} <span style={{ color: '#fff' }}>Current PnL: +24.5%</span></div>
-                        <div style={{ color: '#f6465d' }}>{'>'} <span style={{ color: '#fff' }}>Take-Profit order triggered at $0.0042</span></div>
-                        <div style={{ color: '#02c076' }}>{'>'} <span style={{ color: '#fff' }}>Transaction confirmed. Profit secured.</span></div>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
+                        <div>
+                            <h4 style={{ color: '#fff', fontSize: '0.875rem', fontWeight: '700', marginBottom: '0.5rem' }}>Institutional Analytics</h4>
+                            <p style={{ color: 'var(--ff-muted)', fontSize: '0.75rem' }}>Real-time OHLCV data via Birdeye, detailed holder distribution maps, and smart money tracking.</p>
+                        </div>
+                        <div>
+                            <h4 style={{ color: '#fff', fontSize: '0.875rem', fontWeight: '700', marginBottom: '0.5rem' }}>X Post Generator</h4>
+                            <p style={{ color: 'var(--ff-muted)', fontSize: '0.75rem' }}>Professional marketing tools for token creators and alpha seekers to generate instant hype on X.</p>
+                        </div>
+                        <div>
+                            <h4 style={{ color: '#fff', fontSize: '0.875rem', fontWeight: '700', marginBottom: '0.5rem' }}>Points & Rewards</h4>
+                            <p style={{ color: 'var(--ff-muted)', fontSize: '0.75rem' }}>Gamified trading experience—earn points for every swap and climb the global leaderboard.</p>
+                        </div>
                     </div>
                 </div>
             </div>
