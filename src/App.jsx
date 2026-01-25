@@ -1,23 +1,19 @@
-import Header from './components/Header';
-import Hero from './components/Hero';
-import WhyFlip from './components/WhyFlip';
-import HowItWorks from './components/HowItWorks';
-import FeaturedTokens from './components/FeaturedTokens';
-import CTA from './components/CTA';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
+import Sidebar from './components/sections/Sidebar';
+import TickerBar from './components/sections/TickerBar';
+import Header from './components/sections/Header';
+import TokenDashboard from './components/sections/TokenDashboard';
 
 function App() {
   return (
-    <div className="bg-dark-bg text-gray-100 min-h-screen">
-      <Header />
-      <Hero />
-      <WhyFlip />
-      <HowItWorks />
-      <FeaturedTokens />
-      <CTA />
-      <FAQ />
-      <Footer />
+    <div className="flex h-screen w-full bg-[#0b0e11] text-white overflow-hidden font-sans">
+      <Sidebar />
+      <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
+        <TickerBar />
+        <Header />
+        <main className="flex-1 overflow-hidden">
+          <TokenDashboard />
+        </main>
+      </div>
     </div>
   );
 }
