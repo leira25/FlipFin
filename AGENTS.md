@@ -1,5 +1,5 @@
 ## Project Summary
-Flip Finance is a professional-grade crypto trading terminal for the Solana ecosystem, featuring a data-dense "Cyber-Trading" interface. It provides real-time token tracking, trending lists, and portfolio management tools with a high-contrast dark theme.
+FlipFin is a professional-grade crypto trading terminal for the Solana ecosystem, featuring a data-dense "Cyber-Trading" interface. It provides real-time token tracking, trending lists, and portfolio management tools with a high-contrast dark theme.
 
 ## Tech Stack
 - **Framework**: React 19 (Vite)

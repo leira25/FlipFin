@@ -6,14 +6,14 @@ const Header = () => {
     <header className="flex items-center justify-between px-3 sm:px-4 h-12 border-b border-[#1e2329] bg-[#0d1117]">
       <div className="flex items-center gap-3 sm:gap-4">
         {/* Logo Section */}
-        <a className="flex items-center gap-2 flex-shrink-0" href="/">
-          <img 
-            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/72adb3de-1a58-45c8-82a3-8edac240bd60-flipfin-fun/assets/icons/logo-1.png" 
-            alt="Flip Finance" 
-            className="w-6 h-6 object-contain"
-          />
-          <span className="font-bold text-white text-sm tracking-tight hidden sm:block">Flip</span>
-        </a>
+          <a className="flex items-center gap-2 flex-shrink-0" href="/">
+            <img 
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/72adb3de-1a58-45c8-82a3-8edac240bd60-flipfin-fun/assets/icons/logo-1.png" 
+              alt="FlipFin" 
+              className="w-6 h-6 object-contain"
+            />
+            <span className="font-bold text-white text-sm tracking-tight hidden sm:block">FlipFin</span>
+          </a>
 
         {/* Search Bar */}
         <div className="w-48 sm:w-64 md:w-80 relative">

@@ -5,9 +5,9 @@ const Header = () => {
         <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-background/80 border-b border-border">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                    <img src="/logo.png" alt="Flip Finance Logo" className="h-10 w-auto md:h-12 flex-shrink-0" />
+                    <img src="/logo.png" alt="FlipFin Logo" className="h-10 w-auto md:h-12 flex-shrink-0" />
                     <div className="flex flex-col">
-                        <span className="text-xl md:text-2xl font-bold text-primary">Flip Finance</span>
+                        <span className="text-xl md:text-2xl font-bold text-primary tracking-tighter uppercase italic">FlipFin</span>
                         <span className="text-[10px] text-muted-foreground uppercase tracking-widest font-semibold">Terminal</span>
                     </div>
                 </div>

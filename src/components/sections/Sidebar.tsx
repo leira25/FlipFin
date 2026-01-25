@@ -28,19 +28,19 @@ export default function Sidebar() {
   return (
     <aside className="hidden md:flex flex-col h-full border-r border-[#1e2329] bg-[#0b0e11] transition-all duration-200 w-[200px] flex-shrink-0">
       {/* Brand Logo Section */}
-      <div className="flex items-center justify-between p-3 border-b border-[#1e2329] h-[61px]">
-        <a className="flex items-center gap-2 overflow-hidden" href="/">
-          <div className="w-9 h-9 flex items-center justify-center flex-shrink-0">
-            <img
-              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/72adb3de-1a58-45c8-82a3-8edac240bd60-flipfin-fun/assets/icons/logo-1.png"
-              alt="Flip Finance"
-              className="w-full h-full object-contain"
-            />
-          </div>
-          <span className="font-bold text-white text-[18px] tracking-tight whitespace-nowrap">
-            Flip Finance
-          </span>
-        </a>
+        <div className="flex items-center justify-between p-3 border-b border-[#1e2329] h-[61px]">
+          <a className="flex items-center gap-2 overflow-hidden" href="/">
+            <div className="w-9 h-9 flex items-center justify-center flex-shrink-0">
+              <img
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/72adb3de-1a58-45c8-82a3-8edac240bd60-flipfin-fun/assets/icons/logo-1.png"
+                alt="FlipFin"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <span className="font-bold text-white text-[18px] tracking-tight whitespace-nowrap">
+              FlipFin
+            </span>
+          </a>
         <button className="p-1 hover:bg-[#1e2329] rounded text-gray-500 hover:text-white transition-colors">
           <ChevronLeft className="w-4 h-4" />
         </button>

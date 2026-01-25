@@ -7,9 +7,9 @@ const Footer = () => {
             
             <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
                 <div className="flex flex-col items-center mb-12">
-                    <img src="/logo.png" alt="Flip Finance Logo" className="h-16 w-auto mb-6 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500" />
+                    <img src="/logo.png" alt="FlipFin Logo" className="h-16 w-auto mb-6 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500" />
                     <p className="text-muted-foreground font-data text-xs max-w-lg mx-auto leading-relaxed uppercase tracking-widest">
-                        Flip Finance © 2026 • fastest solana launch & graduation tracker • not financial advice • always dyor • engineered for speed
+                        FlipFin © 2026 • fastest solana launch & graduation tracker • not financial advice • always dyor • engineered for speed
                     </p>
                 </div>
 

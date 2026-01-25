@@ -9,12 +9,12 @@ const Hero = () => {
                 <div className="flex justify-center mb-8">
                     <div className="relative">
                         <div className="absolute inset-0 bg-primary blur-3xl opacity-20"></div>
-                        <img src="/logo.png" alt="Flip Finance Logo" className="h-24 w-auto md:h-32 relative z-10 animate-pulse-slow" />
+                        <img src="/logo.png" alt="FlipFin Logo" className="h-24 w-auto md:h-32 relative z-10 animate-pulse-slow" />
                     </div>
                 </div>
 
                 <h1 className="text-5xl md:text-8xl font-black mb-6 tracking-tighter leading-tight italic uppercase">
-                    Flip <span className="text-primary">Finance</span>
+                    Flip<span className="text-primary">Fin</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10 font-medium">
                     The professional-grade crypto trading terminal for the <span className="text-white">Solana</span> ecosystem. Catch flips and 100x opportunities with real-time data.

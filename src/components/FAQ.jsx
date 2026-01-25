@@ -12,7 +12,7 @@ const FAQ = () => {
                 <div className="space-y-4">
                     <details className="group bg-card border border-border rounded overflow-hidden">
                         <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-                            <span className="text-xl font-black italic uppercase">Is Flip Finance free?</span>
+                            <span className="text-xl font-black italic uppercase">Is FlipFin free?</span>
                             <span className="text-primary transition-transform group-open:rotate-45">+</span>
                         </summary>
                         <div className="px-6 pb-6 text-muted-foreground leading-relaxed font-medium border-t border-border/50 pt-4">

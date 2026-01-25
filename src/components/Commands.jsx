@@ -11,7 +11,7 @@ const Commands = () => {
                     <div className="max-w-2xl">
                         <h2 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter mb-6">Master the <span className="text-primary">Terminal</span></h2>
                         <p className="text-muted-foreground text-lg font-medium leading-relaxed italic border-l-4 border-primary pl-6 py-2 bg-primary/5">
-                            "Speed is everything in the Solana ecosystem. Flip Finance gives you the edge with a streamlined command interface designed for precision."
+                            "Speed is everything in the Solana ecosystem. FlipFin gives you the edge with a streamlined command interface designed for precision."
                         </p>
                     </div>
                     <div className="hidden lg:block">
