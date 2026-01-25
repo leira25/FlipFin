@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
 const Header = () => {
-    const [solPrice, setSolPrice] = useState(142.45);
+    const [solPrice, setSolPrice] = useState(125.00);
 
     useEffect(() => {
         const fetchSolPrice = async () => {
             try {
-                const res = await fetch('https://api.dexscreener.com/latest/dex/pairs/solana/8s98p3skaetkpg5shv8wzyay9u5n4q4mruy2hjbpshxs');
+                const res = await fetch('https://api.dexscreener.com/latest/dex/tokens/So11111111111111111111111111111111111111112');
                 const data = await res.json();
-                if (data.pair?.priceUsd) {
-                    setSolPrice(parseFloat(data.pair.priceUsd));
+                if (data.pairs?.[0]?.priceUsd) {
+                    setSolPrice(parseFloat(data.pairs[0].priceUsd));
                 }
             } catch (err) {
                 console.error('Failed to fetch SOL price in header:', err);

@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
     const [stats, setStats] = useState({
-        liveCreations: 1248,
-        graduating: 29,
-        graduated: 4,
+        liveCreations: 16,
+        graduating: 21,
+        graduated: 9,
         volume24h: 12400000,
-        solPrice: 142.45
+        solPrice: 125.00
     });
 
     const formatVolume = (val) => {
@@ -19,9 +19,9 @@ const Hero = () => {
         const fetchStats = async () => {
             try {
                 // 1. Fetch SOL Price
-                const solRes = await fetch('https://api.dexscreener.com/latest/dex/pairs/solana/8s98p3skaetkpg5shv8wzyay9u5n4q4mruy2hjbpshxs');
+                const solRes = await fetch('https://api.dexscreener.com/latest/dex/tokens/So11111111111111111111111111111111111111112');
                 const solData = await solRes.json();
-                const solPrice = solData.pair?.priceUsd ? parseFloat(solData.pair.priceUsd) : 142.45;
+                const solPrice = solData.pairs?.[0]?.priceUsd ? parseFloat(solData.pairs[0].priceUsd) : 125.00;
 
                 // 2. Fetch Latest Token Profiles
                 const profileRes = await fetch('https://api.dexscreener.com/token-profiles/latest/v1');
