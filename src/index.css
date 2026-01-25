@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply dark;
+  }
+  body {
+    @apply font-sans scroll-smooth;
+  }
+  h1, h2, h3 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .logo-img {
+    filter: drop-shadow(0 4px 6px rgba(20, 241, 149, 0.4));
+    transition: transform 0.3s ease;
+  }
+  .logo-img:hover {
+    transform: scale(1.05);
+  }
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, sans-serif !important;
+}
