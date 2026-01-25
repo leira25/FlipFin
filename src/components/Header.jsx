@@ -40,12 +40,6 @@ const Header = () => {
                 </nav>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
-                    <div className="hidden sm:block" style={{ textAlign: 'right' }}>
-                        <div style={{ fontSize: '10px', color: 'var(--ff-muted)', textTransform: 'uppercase' }}>SOL/USD</div>
-                        <div className="ff-font-mono" style={{ fontSize: '0.875rem', fontWeight: 'bold', color: 'var(--ff-primary)' }}>
-                            ${solPrice.toFixed(2)}
-                        </div>
-                    </div>
                     <a 
                         href="https://flipfin.fun/" 
                         className="ff-btn ff-btn-primary"

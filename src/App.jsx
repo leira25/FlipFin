@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import FeaturedTokens from './components/FeaturedTokens';
+import Documentation from './components/Documentation';
 import WhyFlip from './components/WhyFlip';
 import HowItWorks from './components/HowItWorks';
 import CTA from './components/CTA';
@@ -15,7 +15,7 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <FeaturedTokens />
+        <Documentation />
         <WhyFlip />
         <HowItWorks />
         <CTA />
