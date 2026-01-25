@@ -1,27 +1,28 @@
-import Header from './components/Header';
-import Hero from './components/Hero';
-import FeaturedTokens from './components/FeaturedTokens';
-import WhyFlip from './components/WhyFlip';
-import HowItWorks from './components/HowItWorks';
-import Commands from './components/Commands';
-import FAQ from './components/FAQ';
-import CTA from './components/CTA';
-import Footer from './components/Footer';
+import React from 'react';
+import TickerBar from './components/sections/ticker-bar';
+import Header from './components/sections/header';
+import Sidebar from './components/sections/sidebar';
+import TokenDashboard from './components/sections/token-dashboard';
 
 function App() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--ff-background)', color: 'var(--ff-foreground)', fontFamily: 'var(--ff-font-sans)' }}>
+    <div className="flex flex-col h-screen overflow-hidden bg-[#0b0e11] text-white">
+      {/* Top Ticker Bar */}
+      <TickerBar />
+
+      {/* Main Header */}
       <Header />
-      <main>
-        <Hero />
-        <FeaturedTokens />
-        <WhyFlip />
-        <HowItWorks />
-        <Commands />
-        <FAQ />
-        <CTA />
-      </main>
-      <Footer />
+
+      {/* Main Content Area */}
+      <div className="flex flex-1 overflow-hidden">
+        {/* Left Sidebar */}
+        <Sidebar />
+
+        {/* Dashboard Content */}
+        <main className="flex-1 overflow-hidden relative">
+          <TokenDashboard />
+        </main>
+      </div>
     </div>
   );
 }

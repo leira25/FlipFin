@@ -48,12 +48,12 @@
   --color-sidebar-border: #1e2329;
   --color-sidebar-ring: #02c076;
 
-  --color-success: #02c076;
-  --color-danger: #f6465d;
-  --color-warning: #f59e0b;
-  --color-surface: #14191f;
-  --color-surface-alt: #0d1117;
-  --color-text-muted: #4b5563;
+  /* Brand Specific Tokens */
+  --color-ticker-bg: #14191f;
+  --color-bullish: #02c076;
+  --color-bearish: #f6465d;
+  --color-text-tertiary: #4b5563;
+  --color-highlight: #1e2329;
 
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
@@ -64,22 +64,19 @@
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-ticker: ticker-scroll 30s linear infinite;
 
   @keyframes accordion-down {
-    from {
-      height: 0;
-    }
-    to {
-      height: var(--radix-accordion-content-height);
-    }
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
   }
   @keyframes accordion-up {
-    from {
-      height: var(--radix-accordion-content-height);
-    }
-    to {
-      height: 0;
-    }
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+  @keyframes ticker-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
   }
 }
 
@@ -176,12 +173,6 @@
     color: var(--muted-foreground);
   }
 
-  .text-price {
-    font-family: var(--font-mono);
-    font-weight: 600;
-    font-size: 12px;
-  }
-
   /* Custom Scrollbar */
   ::-webkit-scrollbar {
     width: 4px;
@@ -201,7 +192,7 @@
     background: #2b3139;
   }
 
-  /* Tactical UI Elements */
+  /* Terminal Aesthetic Utilities */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
@@ -210,9 +201,7 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-}
 
-@layer utilities {
   .connect-button {
     background-color: var(--color-primary);
     color: var(--color-primary-foreground);
@@ -228,24 +217,40 @@
     justify-content: center;
     transition: opacity 0.2s;
     cursor: pointer;
+    border: none;
   }
 
   .connect-button:hover {
     opacity: 0.9;
   }
 
-  .ticker-item {
+  .ticker-container {
+    background-color: var(--color-ticker-bg);
+    height: 40px;
     display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 4px 8px;
-    border-radius: 9999px;
-    font-size: 11px;
-    white-space: nowrap;
-    transition: background-color 0.2s;
+    overflow: hidden;
+    border-bottom: 1px solid var(--color-border);
   }
 
-  .ticker-item:hover {
-    background-color: var(--color-secondary);
+  .ticker-content {
+    display: flex;
+    gap: 24px;
+    padding-left: 24px;
+    animation: var(--animate-ticker);
+  }
+
+  .token-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--color-border);
+    transition: background-color 0.15s;
+  }
+
+  .token-row:hover {
+    background-color: var(--color-highlight);
   }
 }
