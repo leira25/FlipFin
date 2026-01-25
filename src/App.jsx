@@ -10,7 +10,8 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-background text-foreground min-h-screen">
+    <div className="bg-background text-foreground min-h-screen cyber-grid">
+      <div className="cyber-scanline"></div>
       <Header />
       <main>
         <Hero />

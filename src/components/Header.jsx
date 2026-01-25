@@ -7,7 +7,7 @@ const Header = () => {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                     <img src="/logo.png" alt="FlipFin Logo" style={{ height: '2.5rem', width: 'auto' }} />
                     <div style={{ display: 'flex', flexDirection: 'column' }}>
-                        <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--ff-primary)', letterSpacing: '-0.05em', textTransform: 'uppercase', fontStyle: 'italic' }}>FlipFin</span>
+                        <span className="logo-text">FlipFin</span>
                         <span style={{ fontSize: '10px', color: 'var(--ff-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: '600' }}>Terminal</span>
                     </div>
                 </div>

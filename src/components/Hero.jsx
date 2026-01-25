@@ -14,7 +14,7 @@ const Hero = () => {
                 </div>
 
                 <h1 className="hero-title">
-                    Flip<span className="ff-text-primary">Fin</span>
+                    Flip<span className="ff-text-primary cyber-glow-text">Fin</span>
                 </h1>
                 <p className="hero-subtitle">
                     The professional-grade crypto trading terminal for the <span style={{ color: '#fff' }}>Solana</span> ecosystem. Catch flips and 100x opportunities with real-time data.
