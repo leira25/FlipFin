@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Documentation from './components/Documentation';
 import WhyFlip from './components/WhyFlip';
-import HowItWorks from './components/HowItWorks';
 import CTA from './components/CTA';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
@@ -17,7 +16,6 @@ function App() {
         <Hero />
         <Documentation />
         <WhyFlip />
-        <HowItWorks />
         <CTA />
         <FAQ />
       </main>
