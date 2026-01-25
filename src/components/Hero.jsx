@@ -30,7 +30,7 @@ const Hero = () => {
                 const solanaAddresses = profiles
                     .filter(t => t.chainId === 'solana')
                     .map(t => t.tokenAddress)
-                    .slice(0, 30);
+                    .slice(0, 100);
 
                 if (solanaAddresses.length > 0) {
                     const detailsRes = await fetch(`https://api.dexscreener.com/tokens/v1/solana/${solanaAddresses.join(',')}`);
@@ -58,21 +58,18 @@ const Hero = () => {
 
                             if (age < 3600000) {
                                 live++;
-                            } else if (mcap < 100000) {
+                            } else if (mcap < 69000) {
                                 graduating++;
                             } else {
                                 graduated++;
                             }
                         });
 
-                        // Since we only sample 30 tokens, we scale the counts slightly to reflect the "thousands" vibe
-                        // or just show the real sample counts. The original static values were 1248, 29, 4.
-                        // Let's use a base multiplier if the counts are low to keep the UI "Join thousands" consistent.
                         setStats({
-                            liveCreations: Math.max(live * 42, 1248 + (Math.random() * 10 | 0)), // Scaled or slightly randomized base
-                            graduating: Math.max(graduating, 29),
-                            graduated: Math.max(graduated, 4),
-                            volume24h: totalVol > 0 ? totalVol * 15 : 12400000, // Scaling volume sample
+                            liveCreations: live,
+                            graduating: graduating,
+                            graduated: graduated,
+                            volume24h: totalVol,
                             solPrice
                         });
                     }
