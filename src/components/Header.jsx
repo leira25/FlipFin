@@ -1,6 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Header = () => {
+    const [solPrice, setSolPrice] = useState(142.45);
+
+    useEffect(() => {
+        const fetchSolPrice = async () => {
+            try {
+                const res = await fetch('https://api.dexscreener.com/latest/dex/pairs/solana/8s98p3skaetkpg5shv8wzyay9u5n4q4mruy2hjbpshxs');
+                const data = await res.json();
+                if (data.pair?.priceUsd) {
+                    setSolPrice(parseFloat(data.pair.priceUsd));
+                }
+            } catch (err) {
+                console.error('Failed to fetch SOL price in header:', err);
+            }
+        };
+
+        fetchSolPrice();
+        const interval = setInterval(fetchSolPrice, 60000);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <header className="header">
             <div className="header-container">
@@ -22,7 +42,9 @@ const Header = () => {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
                     <div className="hidden sm:block" style={{ textAlign: 'right' }}>
                         <div style={{ fontSize: '10px', color: 'var(--ff-muted)', textTransform: 'uppercase' }}>SOL/USD</div>
-                        <div className="ff-font-mono" style={{ fontSize: '0.875rem', fontWeight: 'bold', color: 'var(--ff-primary)' }}>$142.45</div>
+                        <div className="ff-font-mono" style={{ fontSize: '0.875rem', fontWeight: 'bold', color: 'var(--ff-primary)' }}>
+                            ${solPrice.toFixed(2)}
+                        </div>
                     </div>
                     <a 
                         href="https://flipfin.fun/" 
