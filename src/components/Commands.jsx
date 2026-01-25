@@ -3,92 +3,90 @@ import { Terminal, Code, Info, Zap } from 'lucide-react';
 
 const Commands = () => {
     return (
-        <section id="docs" className="py-24 md:py-32 bg-background relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
-            
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col md:flex-row items-center justify-between mb-20 gap-8">
-                    <div className="max-w-2xl">
-                        <h2 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter mb-6">Master the <span className="text-primary">Terminal</span></h2>
-                        <p className="text-muted-foreground text-lg font-medium leading-relaxed italic border-l-4 border-primary pl-6 py-2 bg-primary/5">
+        <section id="docs" className="why-section" style={{ borderTop: '1px solid var(--ff-border)' }}>
+            <div className="container">
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', marginBottom: '5rem' }} className="md:flex-row md:items-center md:justify-between">
+                    <div style={{ maxWidth: '40rem' }}>
+                        <h2 style={{ fontSize: '4rem', fontWeight: '900', fontStyle: 'italic', textTransform: 'uppercase', letterSpacing: '-0.05em', marginBottom: '1.5rem' }}>Master the <span className="ff-text-primary">Terminal</span></h2>
+                        <p style={{ color: 'var(--ff-muted)', fontSize: '1.125rem', fontWeight: '500', lineHeight: '1.6', fontStyle: 'italic', borderLeft: '4px solid var(--ff-primary)', paddingLeft: '1.5rem', backgroundColor: 'rgba(2, 192, 118, 0.05)', padding: '1rem 1.5rem' }}>
                             "Speed is everything in the Solana ecosystem. FlipFin gives you the edge with a streamlined command interface designed for precision."
                         </p>
                     </div>
-                    <div className="hidden lg:block">
-                        <Terminal size={120} className="text-primary opacity-10 animate-pulse" />
+                    <div className="hidden md:block">
+                        <Terminal size={120} style={{ color: 'var(--ff-primary)', opacity: 0.1 }} />
                     </div>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-12">
-                    <div className="bg-card border border-border rounded-lg overflow-hidden flex flex-col">
-                        <div className="p-4 border-b border-border bg-secondary/50 flex items-center justify-between">
-                            <div className="flex items-center gap-2">
-                                <Code size={16} className="text-primary" />
-                                <span className="text-[10px] font-black uppercase tracking-widest">Trading_Module.sh</span>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)', gap: '3rem' }} className="lg:grid-cols-2">
+                    <div className="ff-card" style={{ padding: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+                        <div style={{ padding: '1rem', borderBottom: '1px solid var(--ff-border)', backgroundColor: 'rgba(30, 35, 41, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                <Code size={16} className="ff-text-primary" />
+                                <span style={{ fontSize: '10px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Trading_Module.sh</span>
                             </div>
-                            <div className="flex gap-1.5">
-                                <div className="w-2.5 h-2.5 rounded-full bg-border"></div>
-                                <div className="w-2.5 h-2.5 rounded-full bg-border"></div>
-                                <div className="w-2.5 h-2.5 rounded-full bg-primary/40"></div>
+                            <div style={{ display: 'flex', gap: '0.375rem' }}>
+                                <div style={{ width: '0.625rem', height: '0.625rem', borderRadius: '50%', backgroundColor: 'var(--ff-border)' }}></div>
+                                <div style={{ width: '0.625rem', height: '0.625rem', borderRadius: '50%', backgroundColor: 'var(--ff-border)' }}></div>
+                                <div style={{ width: '0.625rem', height: '0.625rem', borderRadius: '50%', backgroundColor: 'rgba(2, 192, 118, 0.4)' }}></div>
                             </div>
                         </div>
-                        <div className="p-8 space-y-6 flex-1">
-                            <h3 className="text-2xl font-black italic uppercase flex items-center gap-3">
-                                <Zap size={24} className="text-primary" /> Instant Execution
+                        <div style={{ padding: '2rem', flex: 1 }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: '900', fontStyle: 'italic', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
+                                <Zap size={24} className="ff-text-primary" /> Instant Execution
                             </h3>
-                            <div className="space-y-4 font-data">
-                                <div className="group flex items-center justify-between p-3 bg-background border border-border rounded hover:border-primary/50 transition">
-                                    <code className="text-primary">/buy [token]</code>
-                                    <span className="text-[10px] text-muted-foreground uppercase opacity-0 group-hover:opacity-100 transition">Execute Buy</span>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }} className="ff-font-mono">
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.75rem', backgroundColor: 'var(--ff-background)', border: '1px solid var(--ff-border)', borderRadius: '4px' }}>
+                                    <code className="ff-text-primary">/buy [token]</code>
+                                    <span style={{ fontSize: '10px', color: 'var(--ff-muted)', textTransform: 'uppercase' }}>Execute Buy</span>
                                 </div>
-                                <div className="group flex items-center justify-between p-3 bg-background border border-border rounded hover:border-primary/50 transition">
-                                    <code className="text-primary">/sell [token]</code>
-                                    <span className="text-[10px] text-muted-foreground uppercase opacity-0 group-hover:opacity-100 transition">Execute Sell</span>
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.75rem', backgroundColor: 'var(--ff-background)', border: '1px solid var(--ff-border)', borderRadius: '4px' }}>
+                                    <code className="ff-text-primary">/sell [token]</code>
+                                    <span style={{ fontSize: '10px', color: 'var(--ff-muted)', textTransform: 'uppercase' }}>Execute Sell</span>
                                 </div>
-                                <div className="group flex items-center justify-between p-3 bg-background border border-border rounded hover:border-primary/50 transition">
-                                    <code className="text-primary">/alert buy [token]</code>
-                                    <span className="text-[10px] text-muted-foreground uppercase opacity-0 group-hover:opacity-100 transition">Set Buy Trigger</span>
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.75rem', backgroundColor: 'var(--ff-background)', border: '1px solid var(--ff-border)', borderRadius: '4px' }}>
+                                    <code className="ff-text-primary">/alert buy [token]</code>
+                                    <span style={{ fontSize: '10px', color: 'var(--ff-muted)', textTransform: 'uppercase' }}>Set Buy Trigger</span>
                                 </div>
-                                <div className="group flex items-center justify-between p-3 bg-background border border-border rounded hover:border-primary/50 transition">
-                                    <code className="text-primary">/pnl</code>
-                                    <span className="text-[10px] text-muted-foreground uppercase opacity-0 group-hover:opacity-100 transition">Fetch ROI</span>
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.75rem', backgroundColor: 'var(--ff-background)', border: '1px solid var(--ff-border)', borderRadius: '4px' }}>
+                                    <code className="ff-text-primary">/pnl</code>
+                                    <span style={{ fontSize: '10px', color: 'var(--ff-muted)', textTransform: 'uppercase' }}>Fetch ROI</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="bg-card border border-border rounded-lg overflow-hidden flex flex-col">
-                        <div className="p-4 border-b border-border bg-secondary/50 flex items-center justify-between">
-                            <div className="flex items-center gap-2">
-                                <Info size={16} className="text-primary" />
-                                <span className="text-[10px] font-black uppercase tracking-widest">Intelligence_Feed.log</span>
+                    <div className="ff-card" style={{ padding: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+                        <div style={{ padding: '1rem', borderBottom: '1px solid var(--ff-border)', backgroundColor: 'rgba(30, 35, 41, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                <Info size={16} className="ff-text-primary" />
+                                <span style={{ fontSize: '10px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Intelligence_Feed.log</span>
                             </div>
-                            <div className="flex gap-1.5">
-                                <div className="w-2.5 h-2.5 rounded-full bg-border"></div>
-                                <div className="w-2.5 h-2.5 rounded-full bg-border"></div>
-                                <div className="w-2.5 h-2.5 rounded-full bg-primary/40"></div>
+                            <div style={{ display: 'flex', gap: '0.375rem' }}>
+                                <div style={{ width: '0.625rem', height: '0.625rem', borderRadius: '50%', backgroundColor: 'var(--ff-border)' }}></div>
+                                <div style={{ width: '0.625rem', height: '0.625rem', borderRadius: '50%', backgroundColor: 'var(--ff-border)' }}></div>
+                                <div style={{ width: '0.625rem', height: '0.625rem', borderRadius: '50%', backgroundColor: 'rgba(2, 192, 118, 0.4)' }}></div>
                             </div>
                         </div>
-                        <div className="p-8 space-y-6 flex-1">
-                            <h3 className="text-2xl font-black italic uppercase flex items-center gap-3">
-                                <Terminal size={24} className="text-primary" /> Data Streams
+                        <div style={{ padding: '2rem', flex: 1 }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: '900', fontStyle: 'italic', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
+                                <Terminal size={24} className="ff-text-primary" /> Data Streams
                             </h3>
-                            <div className="space-y-4 font-data">
-                                <div className="group flex items-center justify-between p-3 bg-background border border-border rounded hover:border-primary/50 transition">
-                                    <code className="text-primary">/flow</code>
-                                    <span className="text-[10px] text-muted-foreground uppercase opacity-0 group-hover:opacity-100 transition">Real-time Feed</span>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }} className="ff-font-mono">
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.75rem', backgroundColor: 'var(--ff-background)', border: '1px solid var(--ff-border)', borderRadius: '4px' }}>
+                                    <code className="ff-text-primary">/flow</code>
+                                    <span style={{ fontSize: '10px', color: 'var(--ff-muted)', textTransform: 'uppercase' }}>Real-time Feed</span>
                                 </div>
-                                <div className="group flex items-center justify-between p-3 bg-background border border-border rounded hover:border-primary/50 transition">
-                                    <code className="text-primary">/narratives</code>
-                                    <span className="text-[10px] text-muted-foreground uppercase opacity-0 group-hover:opacity-100 transition">Trend Analysis</span>
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.75rem', backgroundColor: 'var(--ff-background)', border: '1px solid var(--ff-border)', borderRadius: '4px' }}>
+                                    <code className="ff-text-primary">/narratives</code>
+                                    <span style={{ fontSize: '10px', color: 'var(--ff-muted)', textTransform: 'uppercase' }}>Trend Analysis</span>
                                 </div>
-                                <div className="group flex items-center justify-between p-3 bg-background border border-border rounded hover:border-primary/50 transition">
-                                    <code className="text-primary">/hype</code>
-                                    <span className="text-[10px] text-muted-foreground uppercase opacity-0 group-hover:opacity-100 transition">Social Pulse</span>
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.75rem', backgroundColor: 'var(--ff-background)', border: '1px solid var(--ff-border)', borderRadius: '4px' }}>
+                                    <code className="ff-text-primary">/hype</code>
+                                    <span style={{ fontSize: '10px', color: 'var(--ff-muted)', textTransform: 'uppercase' }}>Social Pulse</span>
                                 </div>
-                                <div className="group flex items-center justify-between p-3 bg-background border border-border rounded hover:border-primary/50 transition">
-                                    <code className="text-primary">/graduation</code>
-                                    <span className="text-[10px] text-muted-foreground uppercase opacity-0 group-hover:opacity-100 transition">Raydium Radar</span>
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.75rem', backgroundColor: 'var(--ff-background)', border: '1px solid var(--ff-border)', borderRadius: '4px' }}>
+                                    <code className="ff-text-primary">/graduation</code>
+                                    <span style={{ fontSize: '10px', color: 'var(--ff-muted)', textTransform: 'uppercase' }}>Raydium Radar</span>
                                 </div>
                             </div>
                         </div>

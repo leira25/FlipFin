@@ -2,31 +2,32 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-background/80 border-b border-border">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                    <img src="/logo.png" alt="FlipFin Logo" className="h-10 w-auto md:h-12 flex-shrink-0" />
-                    <div className="flex flex-col">
-                        <span className="text-xl md:text-2xl font-bold text-primary tracking-tighter uppercase italic">FlipFin</span>
-                        <span className="text-[10px] text-muted-foreground uppercase tracking-widest font-semibold">Terminal</span>
+        <header className="header">
+            <div className="header-container">
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                    <img src="/logo.png" alt="FlipFin Logo" style={{ height: '2.5rem', width: 'auto' }} />
+                    <div style={{ display: 'flex', flexDirection: 'column' }}>
+                        <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--ff-primary)', letterSpacing: '-0.05em', textTransform: 'uppercase', fontStyle: 'italic' }}>FlipFin</span>
+                        <span style={{ fontSize: '10px', color: 'var(--ff-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: '600' }}>Terminal</span>
                     </div>
                 </div>
 
-                <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-                    <a href="#featured" className="hover:text-primary transition uppercase tracking-wider">Market</a>
-                    <a href="#why" className="hover:text-primary transition uppercase tracking-wider">Features</a>
-                    <a href="#how" className="hover:text-primary transition uppercase tracking-wider">How it works</a>
-                    <a href="#faq" className="hover:text-primary transition uppercase tracking-wider">FAQ</a>
+                <nav className="nav-links">
+                    <a href="#featured" className="nav-link">Market</a>
+                    <a href="#why" className="nav-link">Features</a>
+                    <a href="#how" className="nav-link">How it works</a>
+                    <a href="#faq" className="nav-link">FAQ</a>
                 </nav>
 
-                <div className="flex items-center gap-5">
-                    <div className="hidden sm:block text-right">
-                        <div className="text-[10px] text-muted-foreground uppercase">SOL/USD</div>
-                        <div className="text-sm font-bold text-primary font-data">$142.45</div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+                    <div className="hidden sm:block" style={{ textAlign: 'right' }}>
+                        <div style={{ fontSize: '10px', color: 'var(--ff-muted)', textTransform: 'uppercase' }}>SOL/USD</div>
+                        <div className="ff-font-mono" style={{ fontSize: '0.875rem', fontWeight: 'bold', color: 'var(--ff-primary)' }}>$142.45</div>
                     </div>
                     <a 
                         href="https://flipfin.fun/" 
-                        className="px-6 py-2 bg-primary text-black rounded font-black italic uppercase text-sm hover:opacity-90 transition shadow-[0_0_20px_rgba(2,192,118,0.3)]"
+                        className="ff-btn ff-btn-primary"
+                        style={{ padding: '0.5rem 1.5rem', fontSize: '0.875rem' }}
                     >
                         Launch App
                     </a>

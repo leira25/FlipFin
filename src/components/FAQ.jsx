@@ -2,40 +2,40 @@ import React from 'react';
 
 const FAQ = () => {
     return (
-        <section id="faq" className="py-24 md:py-32 border-t border-border">
-            <div className="max-w-4xl mx-auto px-4">
-                <div className="text-center mb-16">
-                    <h2 className="text-5xl font-black italic uppercase tracking-tighter mb-4">Terminal <span className="text-primary">Intel</span></h2>
-                    <p className="text-muted-foreground font-medium uppercase text-xs tracking-widest">Frequently asked questions</p>
+        <section id="faq" className="why-section" style={{ borderTop: '1px solid var(--ff-border)' }}>
+            <div className="container" style={{ maxWidth: '60rem' }}>
+                <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                    <h2 style={{ fontSize: '4rem', fontWeight: '900', fontStyle: 'italic', textTransform: 'uppercase', letterSpacing: '-0.05em', marginBottom: '1rem' }}>Terminal <span className="ff-text-primary">Intel</span></h2>
+                    <p style={{ color: 'var(--ff-muted)', fontWeight: '500', textTransform: 'uppercase', fontSize: '12px', letterSpacing: '0.3em' }}>Frequently asked questions</p>
                 </div>
                 
-                <div className="space-y-4">
-                    <details className="group bg-card border border-border rounded overflow-hidden">
-                        <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-                            <span className="text-xl font-black italic uppercase">Is FlipFin free?</span>
-                            <span className="text-primary transition-transform group-open:rotate-45">+</span>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                    <details className="faq-item group">
+                        <summary className="faq-question">
+                            <span style={{ fontSize: '1.25rem', fontWeight: '900', fontStyle: 'italic', textTransform: 'uppercase' }}>Is FlipFin free?</span>
+                            <span className="ff-text-primary">+</span>
                         </summary>
-                        <div className="px-6 pb-6 text-muted-foreground leading-relaxed font-medium border-t border-border/50 pt-4">
+                        <div className="faq-answer">
                             Yes. The core terminal features, including live data streams and graduation tracking, are 100% free. We believe in providing the best data to the Solana community without barriers.
                         </div>
                     </details>
 
-                    <details className="group bg-card border border-border rounded overflow-hidden">
-                        <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-                            <span className="text-xl font-black italic uppercase">Do I need to connect a wallet?</span>
-                            <span className="text-primary transition-transform group-open:rotate-45">+</span>
+                    <details className="faq-item group">
+                        <summary className="faq-question">
+                            <span style={{ fontSize: '1.25rem', fontWeight: '900', fontStyle: 'italic', textTransform: 'uppercase' }}>Do I need to connect a wallet?</span>
+                            <span className="ff-text-primary">+</span>
                         </summary>
-                        <div className="px-6 pb-6 text-muted-foreground leading-relaxed font-medium border-t border-border/50 pt-4">
+                        <div className="faq-answer">
                             No. You can monitor the market and browse all terminal data anonymously. You only need to connect a wallet if you wish to use our integrated trading module or sync your favorites across devices.
                         </div>
                     </details>
 
-                    <details className="group bg-card border border-border rounded overflow-hidden">
-                        <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-                            <span className="text-xl font-black italic uppercase">How accurate is the data?</span>
-                            <span className="text-primary transition-transform group-open:rotate-45">+</span>
+                    <details className="faq-item group">
+                        <summary className="faq-question">
+                            <span style={{ fontSize: '1.25rem', fontWeight: '900', fontStyle: 'italic', textTransform: 'uppercase' }}>How accurate is the data?</span>
+                            <span className="ff-text-primary">+</span>
                         </summary>
-                        <div className="px-6 pb-6 text-muted-foreground leading-relaxed font-medium border-t border-border/50 pt-4">
+                        <div className="faq-answer">
                             We pull data directly from our proprietary Solana node infrastructure. Our graduation radar typically identifies tokens 10–90 seconds before they become visible on standard DEX aggregators.
                         </div>
                     </details>
