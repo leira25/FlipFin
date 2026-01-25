@@ -470,6 +470,132 @@
   margin-bottom: 1rem;
 }
 
+/* CTA Section */
+.cta-section {
+  padding: 10rem 0;
+  background-color: var(--ff-bg);
+}
+
+.cta-box {
+  background-color: var(--ff-primary);
+  padding: 8rem 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(2, 192, 118, 0.15);
+}
+
+.cta-title {
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.04em;
+}
+
+@media (min-width: 768px) {
+  .cta-title {
+    font-size: 7rem;
+  }
+}
+
+/* FAQ Section */
+.faq-item {
+  border-bottom: 1px solid var(--ff-border);
+  padding: 1.5rem 0;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-answer {
+  padding-top: 1.5rem;
+  color: var(--ff-muted);
+  line-height: 1.7;
+  font-size: 1rem;
+  max-width: 48rem;
+}
+
+/* Footer Section */
+.footer {
+  background-color: var(--ff-bg);
+  padding: 10rem 0 5rem;
+  border-top: 1px solid var(--ff-border);
+  position: relative;
+}
+
+.footer-glow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 80rem;
+  height: 30rem;
+  background: radial-gradient(circle, rgba(2, 192, 118, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+.footer-link {
+  color: var(--ff-muted);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: all var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--ff-primary);
+  text-shadow: 0 0 10px rgba(2, 192, 118, 0.5);
+}
+
+.footer-bottom {
+  padding-top: 4rem;
+  border-top: 1px solid var(--ff-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .section-container {
   max-width: 1280px;
   margin: 0 auto;
