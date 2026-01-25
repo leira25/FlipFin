@@ -6,7 +6,7 @@ import TokenDashboard from './components/sections/token-dashboard';
 
 function App() {
   return (
-    <div className="flex flex-col h-screen overflow-hidden bg-[#0b0e11] text-white">
+    <div className="terminal-container">
       {/* Top Ticker Bar */}
       <TickerBar />
 
@@ -19,7 +19,7 @@ function App() {
         <Sidebar />
 
         {/* Dashboard Content */}
-        <main className="flex-1 overflow-hidden relative">
+        <main className="terminal-content">
           <TokenDashboard />
         </main>
       </div>
