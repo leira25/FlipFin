@@ -72,7 +72,7 @@ const FeaturedTokens = () => {
                 <div className="section-header">
                     <div>
                         <h2 className="section-title">Live <span className="ff-text-primary">Terminal</span> Feed</h2>
-                        <p style={{ color: 'var(--ff-muted)', fontWeight: '500', textTransform: 'uppercase', fontSize: '12px', letterSpacing: '0.1em' }}>Real-time data from the Solana ecosystem</p>
+                        <p style={{ color: 'var(--ff-muted)', fontWeight: '500', textTransform: 'uppercase', fontSize: '14px', letterSpacing: '0.1em' }}>Real-time data from the Solana ecosystem</p>
                     </div>
                     <div style={{ display: 'flex', gap: '0.5rem' }}>
                         <span className="token-badge">Trending</span>
@@ -91,32 +91,32 @@ const FeaturedTokens = () => {
                             )}
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1.5rem' }}>
                                 <div style={{ flex: 1 }}>
-                                    <h3 style={{ fontWeight: '900', fontSize: '1.5rem', fontStyle: 'italic' }}>{token.symbol}</h3>
-                                    <div className="ff-font-mono" style={{ fontSize: '10px', color: 'var(--ff-muted)', textTransform: 'uppercase' }}>{token.address}</div>
+                                    <h3 style={{ fontWeight: '900', fontSize: '1.75rem', fontStyle: 'italic' }}>{token.symbol}</h3>
+                                    <div className="ff-font-mono" style={{ fontSize: '11px', color: 'var(--ff-muted)', textTransform: 'uppercase' }}>{token.address}</div>
                                 </div>
                                 {token.specialLabel ? (
-                                    <span style={{ color: '#fff', fontWeight: '900', fontSize: '1rem', fontStyle: 'italic', textTransform: 'uppercase' }}>{token.specialLabel}</span>
+                                    <span style={{ color: '#fff', fontWeight: '900', fontSize: '1.25rem', fontStyle: 'italic', textTransform: 'uppercase' }}>{token.specialLabel}</span>
                                 ) : (
-                                    <span className="ff-font-mono" style={{ color: token.change >= 0 ? 'var(--ff-primary)' : 'var(--ff-secondary-red)', fontWeight: '900', fontSize: '1.25rem' }}>
+                                    <span className="ff-font-mono" style={{ color: token.change >= 0 ? 'var(--ff-primary)' : 'var(--ff-secondary-red)', fontWeight: '900', fontSize: '1.5rem' }}>
                                         {token.change >= 0 ? '+' : ''}{token.change.toLocaleString()}%
                                     </span>
                                 )}
                             </div>
                             <div className="token-stat-grid">
                                 <div>
-                                    <div className="token-stat-label">Market Cap</div>
-                                    <div className="token-stat-value">${token.mcap.toLocaleString()}</div>
+                                    <div className="token-stat-label" style={{ fontSize: '11px' }}>Market Cap</div>
+                                    <div className="token-stat-value" style={{ fontSize: '1.5rem' }}>${token.mcap.toLocaleString()}</div>
                                 </div>
                                 <div>
-                                    <div className="token-stat-label">{token.volumeLabel || '24H Volume'}</div>
-                                    <div className="token-stat-value" style={{ color: token.volumeLabel === 'Bonding Curve' ? 'var(--ff-primary)' : '#fff' }}>
+                                    <div className="token-stat-label" style={{ fontSize: '11px' }}>{token.volumeLabel || '24H Volume'}</div>
+                                    <div className="token-stat-value" style={{ fontSize: '1.5rem', color: token.volumeLabel === 'Bonding Curve' ? 'var(--ff-primary)' : '#fff' }}>
                                         {token.volumeLabel === 'Bonding Curve' ? token.volume : (token.volume.startsWith('$') ? token.volume : `$${token.volume}`)}
                                     </div>
                                 </div>
                             </div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '10px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
                                 <span style={{ color: 'var(--ff-muted)' }}>Age: {token.age}</span>
-                                <span style={{ color: token.statusColor, backgroundColor: token.statusBg, padding: '0.125rem 0.5rem', borderRadius: '4px' }}>{token.status}</span>
+                                <span style={{ color: token.statusColor, backgroundColor: token.statusBg, padding: '0.25rem 0.75rem', borderRadius: '4px' }}>{token.status}</span>
                             </div>
                         </div>
                     ))}
