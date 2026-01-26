@@ -65,14 +65,6 @@ const Header = () => {
                 <a href="#why" className="mobile-menu-link" onClick={toggleMenu}>Features</a>
                 <a href="#how" className="mobile-menu-link" onClick={toggleMenu}>How it works</a>
                 <a href="#faq" className="mobile-menu-link" onClick={toggleMenu}>FAQ</a>
-                <a 
-                    href="https://flipfin.fun/" 
-                    className="ff-btn ff-btn-primary"
-                    style={{ padding: '1rem 3rem', fontSize: '1.25rem', marginTop: '1rem' }}
-                    onClick={toggleMenu}
-                >
-                    Launch App
-                </a>
             </div>
         </header>
     );
