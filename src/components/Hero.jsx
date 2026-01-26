@@ -20,11 +20,11 @@ const Hero = () => {
                     The professional-grade crypto trading terminal for the <span style={{ color: '#fff' }}>Solana</span> ecosystem. Catch flips and 100x opportunities with real-time data.
                 </p>
 
-                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.25rem', marginBottom: '2rem' }}>
-                    <a href="https://flipfin.fun/" className="ff-btn ff-btn-primary" style={{ padding: '1.25rem 3rem', fontSize: '1.25rem' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem', marginBottom: '2rem' }}>
+                    <a href="https://flipfin.fun/" className="ff-btn ff-btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem', minWidth: '200px' }}>
                         Launch Terminal
                     </a>
-                    <a href="#why" className="ff-btn ff-btn-secondary" style={{ padding: '1.25rem 3rem', fontSize: '1.25rem' }}>
+                    <a href="#why" className="ff-btn ff-btn-secondary" style={{ padding: '1rem 2rem', fontSize: '1.125rem', minWidth: '200px' }}>
                         View Specs
                     </a>
                 </div>

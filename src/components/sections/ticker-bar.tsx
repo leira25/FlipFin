@@ -93,9 +93,10 @@ export default function TickerBar() {
   return (
     <div className="terminal-ticker no-scrollbar">
       <div style={{ display: 'flex', alignItems: 'center', height: '100%', padding: '0 1rem', gap: '1rem', width: '100%' }}>
-        {/* Featured Section */}
-        <div style={{ display: 'flex', alignItems: 'center', flexShrink: 0, borderRight: '1px solid var(--border-color)', paddingRight: '1rem', height: '100%' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginRight: '1rem', color: '#f59e0b', whiteSpace: 'nowrap' }}>
+          {/* Featured Section */}
+          <div className="hidden sm:flex" style={{ alignItems: 'center', flexShrink: 0, borderRight: '1px solid var(--border-color)', paddingRight: '1rem', height: '100%' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginRight: '1rem', color: '#f59e0b', whiteSpace: 'nowrap' }}>
+
             <Flame size={14} fill="currentColor" />
             <span style={{ fontSize: '10px', fontWeight: 'bold', textTransform: 'uppercase' }}>Featured</span>
           </div>

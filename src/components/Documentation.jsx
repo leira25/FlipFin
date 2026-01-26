@@ -12,7 +12,7 @@ const Documentation = () => {
                     </div>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
+                <div className="token-grid">
                     {/* Phase 1 */}
                     <div className="token-card" style={{ height: '100%', border: '1px solid var(--ff-border)' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
@@ -71,7 +71,7 @@ const Documentation = () => {
                         <Book className="ff-text-primary" size={20} />
                         <h3 style={{ fontWeight: '900', fontSize: '1.1rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Professional Solana Infrastructure</h3>
                     </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem' }}>
+                    <div className="token-grid">
                         <div>
                             <h4 style={{ color: '#fff', fontSize: '1rem', fontWeight: '700', marginBottom: '0.5rem' }}>Institutional Analytics</h4>
                             <p style={{ color: 'var(--ff-muted)', fontSize: '0.875rem' }}>Real-time OHLCV data via Birdeye, detailed holder distribution maps, and smart money tracking.</p>
