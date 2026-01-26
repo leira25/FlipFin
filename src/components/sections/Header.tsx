@@ -1,76 +1,133 @@
 import React, { useState } from "react";
-import { Search, Activity, BookOpen, Shield, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
-const Header = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    const sidebar = document.querySelector('.terminal-sidebar');
-    if (sidebar) {
-      sidebar.classList.toggle('open');
-      setIsSidebarOpen(!isSidebarOpen);
-    }
-  };
+/**
+ * Header component for the FlipFin Solana Trading Terminal.
+ * Implements a sticky navigation with cyber-noir styling,
+ * monospaced typography for terminal text, and high-contrast green accents.
+ */
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="terminal-header">
-      <div className="flex items-center gap-4 flex-1">
-        <button 
-          className="lg:hidden p-1 text-muted hover:text-white"
-          onClick={toggleSidebar}
-        >
-          {isSidebarOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
-        
-        <a className="flex items-center gap-2" href="/">
-          <img 
-            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/72adb3de-1a58-45c8-82a3-8edac240bd60-flipfin-fun/assets/icons/logo-1.png" 
-            alt="Flip Finance" 
-            className="w-6 h-6 object-contain"
-          />
-          <span className="font-bold text-white text-sm tracking-tight hidden sm:block">Flip</span>
-        </a>
-        
-        <div className="flex-1 max-w-md relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted" />
-          <input 
-            type="text"
-            placeholder="Search or paste CA..."
-            className="terminal-input"
-          />
+    <header className="sticky top-0 z-[100] w-full border-b border-[#121e1a] bg-[#0b0e11]/85 backdrop-blur-md">
+      <div className="mx-auto flex h-[71px] max-w-[1280px] items-center justify-between px-5 md:px-[21px]">
+        {/* Logo and Terminal Text Section */}
+        <div className="flex items-center gap-3">
+          <div className="relative h-[35px] w-[43.6px]">
+            <img
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/72adb3de-1a58-45c8-82a3-8edac240bd60-c-users-ariel-desktop-flipfin-vercel-app/assets/icons/logo-1.png"
+              alt="FlipFin Logo"
+              width={44}
+              height={35}
+              className="object-contain"
+            />
+          </div>
+          <div className="flex flex-col leading-none">
+            <span className="logo-text text-[24.5px] font-bold italic tracking-tight text-[#10b981]">
+              FlipFin
+            </span>
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#9ca3af]">
+              Terminal
+            </span>
+          </div>
         </div>
-      </div>
 
-      <div className="flex items-center gap-2">
-        <nav className="hidden lg:flex items-center gap-2">
-          <a className="flex items-center gap-1.5 px-3 py-1.5 bg-opacity-10 bg-primary rounded hover:bg-opacity-20 transition-all" href="/flow">
-            <Activity className="w-3.5 h-3.5 text-primary" />
-            <span className="text-[11px] font-bold">Flow</span>
+        {/* Desktop Navigation Links */}
+        <nav className="hidden items-center gap-8 md:flex">
+          <a
+            href="#featured"
+            className="text-[12.25px] font-medium uppercase tracking-wider text-[#9ca3af] transition-colors hover:text-[#10b981]"
+          >
+            Market
           </a>
-          <a className="flex items-center gap-1.5 px-3 py-1.5 hover:bg-popover rounded transition-all" href="/narratives">
-            <BookOpen className="w-3.5 h-3.5 text-blue-400" />
-            <span className="text-[11px] font-bold">Narratives</span>
+          <a
+            href="#why"
+            className="text-[12.25px] font-medium uppercase tracking-wider text-[#9ca3af] transition-colors hover:text-[#10b981]"
+          >
+            Features
           </a>
-          <a className="flex items-center gap-1.5 px-3 py-1.5 hover:bg-popover rounded transition-all" href="/social">
-            <Shield className="w-3.5 h-3.5 text-orange-400" />
-            <span className="text-[11px] font-bold">Hype</span>
+          <a
+            href="#how"
+            className="text-[12.25px] font-medium uppercase tracking-wider text-[#9ca3af] transition-colors hover:text-[#10b981]"
+          >
+            How it works
+          </a>
+          <a
+            href="#faq"
+            className="text-[12.25px] font-medium uppercase tracking-wider text-[#9ca3af] transition-colors hover:text-[#10b981]"
+          >
+            FAQ
           </a>
         </nav>
 
-        <div className="h-8 w-[1px] bg-border mx-2 hidden sm:block" style={{ backgroundColor: 'var(--border-color)' }}></div>
+        {/* Actions Section */}
+        <div className="flex items-center gap-4">
+          <a
+            href="https://flipfin.fun/"
+            className="group relative hidden md:flex h-[32px] items-center justify-center rounded-[3.5px] bg-[#10b981] px-[21px] text-[12.25px] font-bold uppercase transition-all hover:bg-[#0ea271] hover:shadow-[0_0_15px_rgba(16,185,129,0.4)]"
+            style={{ color: "#000000" }}
+          >
+            <span className="absolute -inset-[1px] rounded-[4px] border border-[#10b981]/20 group-hover:border-[#10b981]/40"></span>
+            <span className="relative z-10">Launch App</span>
+          </a>
 
-        <div className="hidden sm:flex items-center gap-2 px-3 py-1 rounded" style={{ backgroundColor: 'var(--bg-popover)' }}>
-          <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div>
-          <span className="text-[10px] text-muted font-bold uppercase">SOL</span>
-          <span className="text-xs font-bold text-white font-mono">$127.42</span>
+          {/* Mobile Menu Toggle */}
+          <button 
+            className="flex md:hidden text-white hover:text-[#10b981] transition-colors"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
-
-        <button className="connect-btn">
-          Connect
-        </button>
       </div>
+
+      {/* Mobile Navigation Menu */}
+      <div 
+        className={`fixed inset-0 z-[99] bg-[#05080a] pt-24 px-8 transition-transform duration-300 md:hidden ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <nav className="flex flex-col gap-8 text-center">
+          <a
+            href="#featured"
+            onClick={() => setIsMenuOpen(false)}
+            className="text-2xl font-bold uppercase italic tracking-widest text-[#9ca3af] hover:text-[#10b981]"
+          >
+            Market
+          </a>
+          <a
+            href="#why"
+            onClick={() => setIsMenuOpen(false)}
+            className="text-2xl font-bold uppercase italic tracking-widest text-[#9ca3af] hover:text-[#10b981]"
+          >
+            Features
+          </a>
+          <a
+            href="#how"
+            onClick={() => setIsMenuOpen(false)}
+            className="text-2xl font-bold uppercase italic tracking-widest text-[#9ca3af] hover:text-[#10b981]"
+          >
+            How it works
+          </a>
+          <a
+            href="#faq"
+            onClick={() => setIsMenuOpen(false)}
+            className="text-2xl font-bold uppercase italic tracking-widest text-[#9ca3af] hover:text-[#10b981]"
+          >
+            FAQ
+          </a>
+          <a
+            href="https://flipfin.fun/"
+            className="mt-8 flex h-[60px] items-center justify-center rounded-[4px] bg-[#10b981] text-lg font-black uppercase italic tracking-tighter text-[#05080a]"
+          >
+            Launch Terminal
+          </a>
+        </nav>
+      </div>
+
+      {/* Grid Scanline effect holder */}
+      <div className="pointer-events-none absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#10b981]/20 to-transparent"></div>
     </header>
   );
-};
-
-export default Header;
+}

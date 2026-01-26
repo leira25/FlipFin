@@ -1,24 +1,20 @@
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import WhyFlip from './components/WhyFlip';
-import HowItWorks from './components/HowItWorks';
-import FeaturedTokens from './components/FeaturedTokens';
-import Documentation from './components/Documentation';
-import CTA from './components/CTA';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
+import Header from './components/sections/header';
+import Hero from './components/sections/hero';
+import HowItWorks from './components/sections/how-it-works';
+import EliteSpecs from './components/sections/elite-specs';
+import FAQ from './components/sections/faq';
+import CTA from './components/sections/cta';
+import Footer from './components/sections/footer';
 
 function App() {
   return (
-    <div className="bg-[#0b0e11] text-white selection:bg-[#02c076] selection:text-black">
+    <div className="bg-[#05080a] text-white selection:bg-[#10b981] selection:text-[#05080a] scanlines">
       <Header />
       <main>
         <Hero />
-        <FeaturedTokens />
-        <WhyFlip />
         <HowItWorks />
-        <Documentation />
+        <EliteSpecs />
         <FAQ />
         <CTA />
       </main>
