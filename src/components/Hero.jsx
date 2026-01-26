@@ -2,29 +2,29 @@ import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
     return (
-        <section className="hero-section">
+        <section className="hero-section section-py">
             <div className="hero-glow"></div>
 
-            <div className="hero-content">
-                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
-                    <div style={{ position: 'relative' }}>
-                        <div style={{ position: 'absolute', inset: 0, backgroundColor: 'var(--ff-primary)', filter: 'blur(60px)', opacity: 0.15 }}></div>
-                        <img src="/logo.png" alt="FlipFin Logo" style={{ height: '6rem', width: 'auto', position: 'relative', zIndex: 10 }} />
+            <div className="hero-content px-6">
+                <div className="flex justify-center mb-10">
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-[var(--ff-primary)] blur-[60px] opacity-15"></div>
+                        <img src="/logo.png" alt="FlipFin Logo" className="h-20 md:h-28 w-auto relative z-10" />
                     </div>
                 </div>
 
-                <h1 className="hero-title">
+                <h1 className="heading-xl mb-6">
                     Flip<span className="ff-text-primary cyber-glow-text">Fin</span>
                 </h1>
-                <p className="hero-subtitle">
-                    The professional-grade crypto trading terminal for the <span style={{ color: '#fff' }}>Solana</span> ecosystem. Catch flips and 100x opportunities with real-time data.
+                <p className="hero-subtitle mb-12">
+                    The professional-grade crypto trading terminal for the <span className="text-white font-semibold">Solana</span> ecosystem. Catch flips and 100x opportunities with real-time data.
                 </p>
 
-                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem', marginBottom: '2rem' }}>
-                    <a href="https://flipfin.fun/" className="ff-btn ff-btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem', minWidth: '200px' }}>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://flipfin.fun/" className="ff-btn ff-btn-primary px-8 py-4 text-lg w-full sm:w-auto min-w-[220px]">
                         Launch Terminal
                     </a>
-                    <a href="#why" className="ff-btn ff-btn-secondary" style={{ padding: '1rem 2rem', fontSize: '1.125rem', minWidth: '200px' }}>
+                    <a href="#why" className="ff-btn ff-btn-secondary px-8 py-4 text-lg w-full sm:w-auto min-w-[220px]">
                         View Specs
                     </a>
                 </div>

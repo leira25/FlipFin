@@ -10,10 +10,10 @@ const Header = () => {
         const checkMobile = () => {
             setIsMobile(window.innerWidth < 768);
         };
-        
+
         checkMobile();
         window.addEventListener('resize', checkMobile);
-        
+
         const fetchSolPrice = async () => {
             try {
                 const res = await fetch('https://api.dexscreener.com/latest/dex/tokens/So11111111111111111111111111111111111111112');
@@ -38,28 +38,27 @@ const Header = () => {
 
     return (
         <header className="header">
-            <div className="header-container">
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                    <img src="/logo.png" alt="FlipFin Logo" style={{ height: '2.5rem', width: 'auto' }} />
-                    <div style={{ display: 'flex', flexDirection: 'column' }}>
-                        <span className="logo-text">FlipFin</span>
-                        <span style={{ fontSize: '10px', color: 'var(--ff-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: '600' }}>Terminal</span>
+            <div className="section-container flex items-center justify-between h-20 md:h-24">
+                <div className="flex items-center gap-3">
+                    <img src="/logo.png" alt="FlipFin Logo" className="h-10 md:h-12 w-auto" />
+                    <div className="flex flex-col">
+                        <span className="logo-text !text-2xl">FlipFin</span>
+                        <span className="text-[10px] text-[var(--ff-muted)] uppercase tracking-widest font-bold">Terminal</span>
                     </div>
                 </div>
 
-                <nav className="nav-links">
-                    <a href="#featured" className="nav-link">Market</a>
-                    <a href="#why" className="nav-link">Features</a>
-                    <a href="#how" className="nav-link">How it works</a>
-                    <a href="#faq" className="nav-link">FAQ</a>
+                <nav className="hidden md:flex items-center gap-10">
+                    <a href="#featured" className="nav-link font-bold">Market</a>
+                    <a href="#why" className="nav-link font-bold">Features</a>
+                    <a href="#how" className="nav-link font-bold">How it works</a>
+                    <a href="#faq" className="nav-link font-bold">FAQ</a>
                 </nav>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+                <div className="flex items-center gap-5">
                     {!isMobile && (
-                        <a 
-                            href="https://flipfin.fun/" 
-                            className="ff-btn ff-btn-primary"
-                            style={{ padding: '0.5rem 1.5rem', fontSize: '0.875rem' }}
+                        <a
+                            href="https://flipfin.fun/"
+                            className="ff-btn ff-btn-primary px-6 py-2.5 text-sm"
                         >
                             Launch App
                         </a>
@@ -76,6 +75,13 @@ const Header = () => {
                 <a href="#why" className="mobile-menu-link" onClick={toggleMenu}>Features</a>
                 <a href="#how" className="mobile-menu-link" onClick={toggleMenu}>How it works</a>
                 <a href="#faq" className="mobile-menu-link" onClick={toggleMenu}>FAQ</a>
+                <a
+                    href="https://flipfin.fun/"
+                    className="ff-btn ff-btn-primary"
+                    style={{ padding: '0.5rem 1.5rem', fontSize: '0.875rem' }}
+                >
+                    Launch App
+                </a>
             </div>
         </header>
     );
