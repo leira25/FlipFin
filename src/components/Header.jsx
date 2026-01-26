@@ -28,10 +28,9 @@ const Header = () => {
 
         fetchSolPrice();
         const interval = setInterval(fetchSolPrice, 60000);
-        
         return () => {
-            window.removeEventListener('resize', checkMobile);
             clearInterval(interval);
+            window.removeEventListener('resize', checkMobile);
         };
     }, []);
 
@@ -57,15 +56,13 @@ const Header = () => {
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
                     {!isMobile && (
-                        <div className="hidden md:flex">
-                            <a 
-                                href="https://flipfin.fun/" 
-                                className="ff-btn ff-btn-primary"
-                                style={{ padding: '0.5rem 1.5rem', fontSize: '0.875rem' }}
-                            >
-                                Launch App
-                            </a>
-                        </div>
+                        <a 
+                            href="https://flipfin.fun/" 
+                            className="ff-btn ff-btn-primary"
+                            style={{ padding: '0.5rem 1.5rem', fontSize: '0.875rem' }}
+                        >
+                            Launch App
+                        </a>
                     )}
                     <button className="hamburger" onClick={toggleMenu}>
                         {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -79,16 +76,6 @@ const Header = () => {
                 <a href="#why" className="mobile-menu-link" onClick={toggleMenu}>Features</a>
                 <a href="#how" className="mobile-menu-link" onClick={toggleMenu}>How it works</a>
                 <a href="#faq" className="mobile-menu-link" onClick={toggleMenu}>FAQ</a>
-                {!isMobile && (
-                    <a 
-                        href="https://flipfin.fun/" 
-                                className="ff-btn ff-btn-primary"
-                        style={{ padding: '1rem 3rem', fontSize: '1.25rem', marginTop: '1rem' }}
-                        onClick={toggleMenu}
-                    >
-                        Launch App
-                    </a>
-                )}
             </div>
         </header>
     );
