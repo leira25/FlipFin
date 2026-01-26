@@ -4,16 +4,8 @@ import { Menu, X } from 'lucide-react';
 const Header = () => {
     const [solPrice, setSolPrice] = useState(125.00);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        const checkMobile = () => {
-            setIsMobile(window.innerWidth < 768);
-        };
-
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-
         const fetchSolPrice = async () => {
             try {
                 const res = await fetch('https://api.dexscreener.com/latest/dex/tokens/So11111111111111111111111111111111111111112');
@@ -28,10 +20,7 @@ const Header = () => {
 
         fetchSolPrice();
         const interval = setInterval(fetchSolPrice, 60000);
-        return () => {
-            clearInterval(interval);
-            window.removeEventListener('resize', checkMobile);
-        };
+        return () => clearInterval(interval);
     }, []);
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -47,29 +36,25 @@ const Header = () => {
                     </div>
                 </div>
 
-                {!isMobile && (
-                    <nav className="flex items-center gap-10">
-                        <a href="#featured" className="nav-link font-bold">Market</a>
-                        <a href="#why" className="nav-link font-bold">Features</a>
-                        <a href="#how" className="nav-link font-bold">How it works</a>
-                        <a href="#faq" className="nav-link font-bold">FAQ</a>
-                    </nav>
-                )}
+                <nav className="nav-links">
+                    <a href="#featured" className="nav-link font-bold">Market</a>
+                    <a href="#why" className="nav-link font-bold">Features</a>
+                    <a href="#how" className="nav-link font-bold">How it works</a>
+                    <a href="#faq" className="nav-link font-bold">FAQ</a>
+                </nav>
 
                 <div className="flex items-center gap-5">
-                    {!isMobile && (
+                    <div className="hidden md:flex items-center gap-5">
                         <a
                             href="https://flipfin.fun/"
                             className="ff-btn ff-btn-primary px-6 py-2.5 text-sm"
                         >
                             Launch App
                         </a>
-                    )}
-                    {isMobile && (
-                        <button className="hamburger" onClick={toggleMenu}>
-                            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-                        </button>
-                    )}
+                    </div>
+                    <button className="hamburger" onClick={toggleMenu}>
+                        {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                    </button>
                 </div>
             </div>
 

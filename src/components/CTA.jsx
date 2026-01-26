@@ -2,7 +2,7 @@ import React from 'react';
 
 const CTA = () => {
     return (
-        <section className="cta-section section-py">
+        <section className="cta-section">
             <div className="section-container">
                 <div className="cta-box px-8 md:px-16 py-20 md:py-32">
                     <h2 className="cta-title">

@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const FAQ = () => {
     return (
-        <section id="faq" className="faq-section section-py bg-[var(--ff-bg)]">
+        <section id="faq" className="faq-section bg-[var(--ff-bg)]">
             <div className="section-container max-w-4xl">
                 <div className="text-center mb-20 md:mb-32">
-                    <h2 className="heading-lg mb-4">Terminal <span className="ff-text-primary cyber-glow-text">Intel</span></h2>
+                    <h2 className="section-title mb-4">Terminal <span className="ff-text-primary cyber-glow-text">Intel</span></h2>
                     <p className="text-[var(--ff-muted)] font-medium uppercase text-sm tracking-widest">Frequently asked questions</p>
                 </div>
                 
@@ -46,4 +46,3 @@ const FAQ = () => {
 };
 
 export default FAQ;
-

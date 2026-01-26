@@ -48,10 +48,6 @@
   --ff-border: #1e2329;
   --ff-muted: #9ca3af;
   --ff-red: #f6465d;
-
-  /* Spacing Variables */
-  --section-spacing: 5rem;
-  --section-spacing-desktop: 10rem;
 }
 
 @layer base {
@@ -81,40 +77,6 @@
     line-height: 1.1;
     letter-spacing: -0.02em;
   }
-}
-
-/* Section Spacing Utilities */
-
-.section-py {
-  padding-top: var(--section-spacing);
-  padding-bottom: var(--section-spacing);
-}
-
-@media (min-width: 1024px) {
-  .section-py {
-    padding-top: var(--section-spacing-desktop);
-    padding-bottom: var(--section-spacing-desktop);
-  }
-}
-
-.heading-xl {
-  font-size: clamp(3.5rem, 10vw, 8rem);
-  font-weight: 900;
-  line-height: 0.9;
-  letter-spacing: -0.05em;
-  text-transform: uppercase;
-  font-style: italic;
-  font-family: var(--font-display);
-}
-
-.heading-lg {
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  font-style: italic;
-  font-family: var(--font-display);
 }
 
 .section-container {
@@ -305,6 +267,23 @@
 @media (min-width: 768px) {
   .hero-title {
     font-size: 7.5rem;
+  }
+}
+
+.section-title {
+  font-size: 3.5rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-style: italic;
+  font-family: var(--font-display);
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 5.5rem;
   }
 }
 
@@ -650,12 +629,6 @@
     flex-direction: row;
     justify-content: space-between;
   }
-}
-
-.section-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
 }
 
 .container {

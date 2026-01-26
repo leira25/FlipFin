@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
     return (
-        <section className="hero-section section-py relative overflow-hidden">
+        <section className="hero-section relative overflow-hidden">
             <div className="hero-glow"></div>
 
             <div className="section-container relative z-10">
@@ -13,7 +13,7 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <h1 className="heading-xl mb-6">
+                <h1 className="hero-title mb-6">
                     Flip<span className="ff-text-primary cyber-glow-text">Fin</span>
                 </h1>
                 <p className="hero-subtitle mb-12 max-w-2xl mx-auto">
