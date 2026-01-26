@@ -1,123 +1,193 @@
-import React from 'react';
-import { Terminal, Activity, Zap, BarChart3, Search, Filter, ShieldCheck, Cpu } from 'lucide-react';
-
-const TokenRow = ({ label, command, action, colorClass }: { label: string, command: string, action: string, colorClass: string }) => (
-  <div className="token-row">
-    <div className={`p-2 rounded bg-opacity-10 ${colorClass.replace('text-', 'bg-')} bg-opacity-10`}>
-      <Terminal className={`w-3 h-3 ${colorClass}`} />
-    </div>
-    <div className="flex-1 min-w-0">
-      <div className="flex items-center justify-between">
-        <span className="font-bold text-white uppercase">{label}</span>
-        <span className="text-[10px] text-muted font-mono">{command}</span>
-      </div>
-      <div className="flex items-center justify-between mt-1">
-        <span className={`text-[10px] font-mono ${colorClass}`}>{action}</span>
-        <div className="flex items-center gap-1">
-          <div className={`w-1 h-1 rounded-full ${colorClass.replace('text-', 'bg-')} animate-pulse`} />
-          <span className="text-[9px] text-muted">ONLINE</span>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-const ColumnHeader = ({ title, subtitle, icon: Icon, colorClass }: { title: string, subtitle: string, icon: any, colorClass: string }) => (
-  <div className="column-header">
-    <div className="flex items-center gap-2">
-      <Icon className={`w-4 h-4 ${colorClass}`} />
-      <div>
-        <h3 className="text-[13px] text-white font-bold">{title}</h3>
-        <p className="text-[10px] text-muted font-mono">{subtitle}</p>
-      </div>
-    </div>
-    <div className="flex items-center gap-2">
-      <button className="p-1 text-muted hover:text-white transition-colors">
-        <Search className="w-3 h-3" />
-      </button>
-      <button className="p-1 text-muted hover:text-white transition-colors">
-        <Filter className="w-3 h-3" />
-      </button>
-    </div>
-  </div>
-);
+import React, { useState, useEffect } from 'react';
+import { TrendingUp, TrendingDown, DollarSign, Zap, Clock, Eye, Target } from 'lucide-react';
 
 const TokenDashboard = () => {
-  const sections = [
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => setTime(new Date()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const hotTokens = [
     {
-      title: "Intelligence_Feed.log",
-      subtitle: "Data Streams",
-      icon: Activity,
-      colorClass: "text-primary",
-      items: [
-        { label: "/flow", command: "Real-time Feed", action: "Streaming..." },
-        { label: "/narratives", command: "Trend Analysis", action: "Analyzing Patterns" },
-        { label: "/hype", command: "Social Pulse", action: "Calculating Velocity" },
-        { label: "/graduation", command: "Raydium Radar", action: "Monitoring Pools" },
-      ]
+      name: "MOONBAG",
+      symbol: "MOON",
+      price: "$0.000456",
+      change: "+124%",
+      volume: "$2.1M",
+      status: "HOT",
+      color: "#10b981"
     },
     {
-      title: "Trading_Module.sh",
-      subtitle: "Instant Execution",
-      icon: Zap,
-      colorClass: "text-primary",
-      items: [
-        { label: "/buy [token]", command: "Execute Buy", action: "Standby" },
-        { label: "/sell [token]", command: "Execute Sell", action: "Standby" },
-        { label: "/alert buy", command: "Set Buy Trigger", action: "Active" },
-        { label: "/pnl", command: "Fetch ROI", action: "Ready" },
-      ]
+      name: "NEBULA",
+      symbol: "NEB",
+      price: "$0.000123",
+      change: "-15%",
+      volume: "$890K",
+      status: "COOLING",
+      color: "#f59e0b"
     },
     {
-      title: "Security_Protocols.sys",
-      subtitle: "Risk Management",
-      icon: ShieldCheck,
-      colorClass: "text-primary",
-      items: [
-        { label: "/audit", command: "Contract Scan", action: "No Threats" },
-        { label: "/honeypot", command: "Check Liquidity", action: "Verified" },
-        { label: "/whale", command: "Monitor Large Moves", action: "Quiet" },
-        { label: "/sniff", command: "Verify Mint", action: "Secure" },
-      ]
+      name: "RAPTOR",
+      symbol: "RAP",
+      price: "$0.000789",
+      change: "+340%",
+      volume: "$5.2M",
+      status: "EXPLOSIVE",
+      color: "#ef4444"
     },
     {
-      title: "Neural_Compute.bin",
-      subtitle: "AI Predictions",
-      icon: Cpu,
-      colorClass: "text-primary",
-      items: [
-        { label: "/predict", command: "Model Output", action: "Bullish 84%" },
-        { label: "/sentiment", command: "Market Mood", action: "Greedy" },
-        { label: "/volatility", command: "Std Deviation", action: "Low" },
-        { label: "/alpha", command: "Early Signals", action: "Searching..." },
-      ]
+      name: "AURORA",
+      symbol: "AUR",
+      price: "$0.000056",
+      change: "+87%",
+      volume: "$1.3M",
+      status: "RISING",
+      color: "#3b82f6"
+    }
+  ];
+
+  const metrics = [
+    {
+      label: "Active Traders",
+      value: "2,847",
+      icon: <Zap size={20} />
+    },
+    {
+      label: "24h Volume",
+      value: "$47.2M",
+      icon: <DollarSign size={20} />
+    },
+    {
+      label: "Avg Latency",
+      value: "42ms",
+      icon: <Clock size={20} />
     }
   ];
 
   return (
-    <div className="dashboard-grid no-scrollbar">
-      {sections.map((section, idx) => (
-        <div key={idx} className="dashboard-column">
-          <ColumnHeader 
-            title={section.title}
-            subtitle={section.subtitle}
-            icon={section.icon}
-            colorClass={section.colorClass}
-          />
-          <div className="flex-1 overflow-y-auto no-scrollbar">
-            {section.items.map((item, i) => (
-              <TokenRow 
-                key={i}
-                label={item.label}
-                command={item.command}
-                action={item.action}
-                colorClass={section.colorClass}
-              />
-            ))}
+    <section className="relative py-16 bg-gradient-to-b from-[#05080a] to-[#0a1510] overflow-hidden">
+      {/* Animated Background Grid */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="grid grid-cols-12 gap-4 h-full">
+          {Array.from({ length: 48 }).map((_, i) => (
+            <div key={i} className="border-l border-[#121e1a] h-full"></div>
+          ))}
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 md:px-8 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-6xl font-bold italic uppercase tracking-wider mb-4">
+            Live <span className="text-[#10b981] cyber-glow">Market</span> Feed
+          </h2>
+          <p className="text-sm md:text-base text-[#94a3b8] font-mono uppercase tracking-widest">
+            Real-time Solana token intelligence
+          </p>
+        </div>
+
+        {/* Metrics Bar */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {metrics.map((metric, index) => (
+            <div key={index} className="cyber-card p-6 border border-[#121e1a]">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="text-[#10b981]">{metric.icon}</div>
+                  <div>
+                    <div className="text-xs text-[#94a3b8] uppercase tracking-wider font-mono">
+                      {metric.label}
+                    </div>
+                    <div className="text-2xl font-bold text-white font-mono">
+                      {metric.value}
+                    </div>
+                  </div>
+                </div>
+                <div className="w-2 h-2 bg-[#10b981] rounded-full animate-pulse"></div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Token Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {hotTokens.map((token, index) => (
+            <div key={index} className="cyber-card p-6 border border-[#121e1a] group hover:border-[#10b981] transition-all duration-300">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-lg font-bold text-white font-mono">{token.name}</h3>
+                  <p className="text-sm text-[#94a3b8] font-mono">{token.symbol}</p>
+                </div>
+                <div 
+                  className="px-3 py-1 rounded-full text-xs font-bold font-mono"
+                  style={{ backgroundColor: `${token.color}20`, color: token.color }}
+                >
+                  {token.status}
+                </div>
+              </div>
+              
+              <div className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-[#94a3b8] font-mono">Price</span>
+                  <span className="text-white font-mono font-bold">{token.price}</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-[#94a3b8] font-mono">24h Change</span>
+                  <span className={`font-mono font-bold ${token.change.startsWith('+') ? 'text-[#10b981]' : 'text-[#ef4444]'}`}>
+                    {token.change}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-[#94a3b8] font-mono">Volume</span>
+                  <span className="text-white font-mono">{token.volume}</span>
+                </div>
+              </div>
+
+              {/* Status Indicator */}
+              <div className="mt-4 flex items-center justify-between">
+                <div className="flex gap-2">
+                  {[...Array(3)].map((_, i) => (
+                    <div key={i} className="w-2 h-2 bg-[#121e1a] rounded-full group-hover:bg-[#10b981] transition-colors"></div>
+                  ))}
+                </div>
+                <span className="text-xs text-[#94a3b8] font-mono">LIVE</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom Status Bar */}
+        <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#94a3b8] font-mono">
+          <div className="flex items-center gap-4">
+            <span className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-[#10b981] rounded-full animate-pulse"></div>
+              SYSTEM ONLINE
+            </span>
+            <span className="flex items-center gap-2">
+              <Eye size={14} />
+              MONITORING 24/7
+            </span>
+          </div>
+          <div className="flex items-center gap-4">
+            <span>LAST UPDATE: {time.toLocaleTimeString()}</span>
+            <span className="flex items-center gap-2">
+              <Target size={14} />
+              PRECISION MODE
+            </span>
           </div>
         </div>
-      ))}
-    </div>
+      </div>
+
+      {/* Subtle Bottom Glow Overlay */}
+      <div
+        className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px]"
+        style={{
+          background:
+            "radial-gradient(circle at 50% 100%, rgba(16, 185, 129, 0.05) 0%, transparent 60%)",
+        }}
+      />
+    </section>
   );
 };
 

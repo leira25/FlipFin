@@ -1,4 +1,5 @@
 import React from 'react';
+import { Globe, MessageSquare, Book, ExternalLink } from 'lucide-react';
 
 const Footer = () => {
   return (
