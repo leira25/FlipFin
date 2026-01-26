@@ -4,18 +4,18 @@ const FAQ = () => {
     return (
         <section id="faq" className="faq-section bg-[var(--ff-bg)]">
             <div className="section-container max-w-4xl">
-                <div className="text-center mb-20 md:mb-32">
+                <div className="text-center mb-12 md:mb-16">
                     <h2 className="section-title mb-4">Terminal <span className="ff-text-primary cyber-glow-text">Intel</span></h2>
-                    <p className="text-[var(--ff-muted)] font-medium uppercase text-sm tracking-widest">Frequently asked questions</p>
+                    <p className="text-[var(--ff-muted)] font-medium uppercase text-xs tracking-widest">Frequently asked questions</p>
                 </div>
                 
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-3">
                     <details className="faq-item group" open>
-                        <summary className="faq-question py-8 px-6 bg-[var(--ff-card)] border border-[var(--ff-border)] rounded-xl hover:border-[var(--ff-primary)] transition-colors">
-                            <span className="text-xl md:text-2xl font-black italic uppercase">Is FlipFin free?</span>
-                            <span className="ff-text-primary text-3xl group-open:rotate-45 transition-transform">+</span>
+                        <summary className="faq-question py-6 px-6 bg-[var(--ff-card)] border border-[var(--ff-border)] rounded-xl hover:border-[var(--ff-primary)] transition-colors">
+                            <span className="text-lg md:text-xl font-black italic uppercase">Is FlipFin free?</span>
+                            <span className="ff-text-primary text-2xl group-open:rotate-45 transition-transform">+</span>
                         </summary>
-                        <div className="faq-answer text-lg leading-relaxed p-8 bg-[var(--ff-bg)] border-x border-b border-[var(--ff-border)] rounded-b-xl -mt-2">
+                        <div className="faq-answer text-base leading-relaxed p-6 bg-[var(--ff-bg)] border-x border-b border-[var(--ff-border)] rounded-b-xl -mt-2">
                             Yes. The core terminal features, including live data streams and graduation tracking, are 100% free. We believe in providing the best data to the Solana community without barriers.
                         </div>
                     </details>

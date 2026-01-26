@@ -2,11 +2,11 @@ import React from 'react';
 
 const HowItWorks = () => {
     return (
-        <section id="how" className="how-section section-py bg-[var(--ff-card)]">
+        <section id="how" className="how-section py-20 bg-[var(--ff-card)]">
             <div className="section-container">
-                <div className="text-center mb-20 md:mb-32">
-                    <h2 className="heading-lg mb-4">The <span className="ff-text-primary cyber-glow-text">Workflow</span></h2>
-                    <p className="text-[var(--ff-muted)] font-medium uppercase text-sm tracking-widest">Master the terminal in three steps</p>
+                <div className="text-center mb-16 md:mb-24">
+                    <h2 className="section-title mb-4">The <span className="ff-text-primary cyber-glow-text">Workflow</span></h2>
+                    <p className="text-[var(--ff-muted)] font-medium uppercase text-xs tracking-widest">Master the terminal in three steps</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-10">

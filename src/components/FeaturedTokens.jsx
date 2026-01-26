@@ -67,12 +67,12 @@ const FeaturedTokens = () => {
     }, []);
 
     return (
-        <section id="featured" className="tokens-section section-py">
+        <section id="featured" className="tokens-section py-16">
             <div className="section-container">
-                <div className="section-header mb-16">
+                <div className="section-header mb-12">
                     <div>
-                        <h2 className="heading-lg mb-4">Live <span className="ff-text-primary cyber-glow-text">Terminal</span> Feed</h2>
-                        <p className="text-[var(--ff-muted)] font-medium uppercase text-sm tracking-widest">Real-time data from the Solana ecosystem</p>
+                        <h2 className="section-title mb-4">Live <span className="ff-text-primary cyber-glow-text">Terminal</span> Feed</h2>
+                        <p className="text-[var(--ff-muted)] font-medium uppercase text-xs tracking-widest">Real-time data from the Solana ecosystem</p>
                     </div>
                     <div className="flex gap-3">
                         <span className="token-badge">Trending</span>

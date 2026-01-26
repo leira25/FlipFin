@@ -1,10 +1,27 @@
-import React from "react";
-import { Search, Activity, BookOpen, Shield } from "lucide-react";
+import React, { useState } from "react";
+import { Search, Activity, BookOpen, Shield, Menu, X } from "lucide-react";
 
 const Header = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    const sidebar = document.querySelector('.terminal-sidebar');
+    if (sidebar) {
+      sidebar.classList.toggle('open');
+      setIsSidebarOpen(!isSidebarOpen);
+    }
+  };
+
   return (
     <header className="terminal-header">
       <div className="flex items-center gap-4 flex-1">
+        <button 
+          className="lg:hidden p-1 text-muted hover:text-white"
+          onClick={toggleSidebar}
+        >
+          {isSidebarOpen ? <X size={20} /> : <Menu size={20} />}
+        </button>
+        
         <a className="flex items-center gap-2" href="/">
           <img 
             src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/72adb3de-1a58-45c8-82a3-8edac240bd60-flipfin-fun/assets/icons/logo-1.png" 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Search, Coins, LayoutGrid, Gift, Eye, Trophy, FileText, Wallet, Settings, Terminal, Shield, Zap } from "lucide-react";
+import { Search, Coins, LayoutGrid, Gift, Eye, Trophy, FileText, Wallet, Settings, Terminal, Shield, Zap, X } from "lucide-react";
 
 const sidebarLinks = [
   { name: "Terminal", href: "/", icon: Terminal, active: true },
@@ -13,8 +13,21 @@ const sidebarLinks = [
 ];
 
 const Sidebar = () => {
+  const closeSidebar = () => {
+    const sidebar = document.querySelector('.terminal-sidebar');
+    if (sidebar) {
+      sidebar.classList.remove('open');
+    }
+  };
+
   return (
     <aside className="terminal-sidebar">
+      <div className="lg:hidden flex justify-end p-4 border-bottom border-[var(--border-color)]">
+        <button className="text-muted hover:text-white" onClick={closeSidebar}>
+          <X size={20} />
+        </button>
+      </div>
+
       <nav className="flex-1 py-4 overflow-y-auto no-scrollbar">
         <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
           {sidebarLinks.map((link) => (
