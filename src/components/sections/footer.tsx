@@ -34,7 +34,7 @@ const Footer = () => {
               X
             </a>
             <a 
-              href="https://discord.gg/flipfin" 
+              href="https://discord.gg/UXUFzsbH" 
               className="flex items-center gap-2 text-[12px] font-mono text-muted-foreground hover:text-neon-green transition-colors uppercase tracking-widest"
               target="_blank"
               rel="noopener noreferrer"
