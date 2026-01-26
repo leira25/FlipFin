@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
     return (
-        <section className="hero-section relative overflow-hidden">
+        <section id="market" className="hero-section relative overflow-hidden">
             <div className="hero-glow"></div>
 
             <div className="section-container relative z-10">

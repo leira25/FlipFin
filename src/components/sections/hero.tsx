@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[676px] w-full bg-[#05080a] pt-[112px] pb-[140px] px-[21px] flex flex-col items-center justify-center overflow-hidden">
+    <section id="market" className="relative min-h-[676px] w-full bg-[#05080a] pt-[112px] pb-[140px] px-[21px] flex flex-col items-center justify-center overflow-hidden">
       {/* Hero Radial Glow Background */}
       <div 
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1120px] h-[560px] pointer-events-none z-0"
