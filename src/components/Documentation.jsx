@@ -3,11 +3,11 @@ import { Book, Code, Terminal, Zap, Shield, Globe, Cpu, BarChart3 } from 'lucide
 
 const Documentation = () => {
     return (
-        <section id="how" className="section-py relative overflow-hidden" style={{ background: 'linear-gradient(to bottom, #0b0e11, #0d1117)' }}>
+        <section id="how" className="how-section">
             <div className="section-container">
                 <div className="mb-16 md:mb-24">
-                    <h2 className="heading-lg mb-4">Terminal <span className="ff-text-primary">How It Works</span></h2>
-                    <p className="text-muted-caps">The lifecycle of a high-frequency Solana trade</p>
+                    <h2 className="section-title">Terminal <span className="ff-text-primary">How It Works</span></h2>
+                    <p style={{ color: 'var(--ff-muted)', fontWeight: '500', textTransform: 'uppercase', fontSize: '14px', letterSpacing: '0.1em' }}>The lifecycle of a high-frequency Solana trade</p>
                 </div>
 
                 <div className="feature-grid mb-16 md:mb-24">

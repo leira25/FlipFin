@@ -59,78 +59,26 @@
     background-color: var(--bg-main);
     color: var(--text-main);
     font-family: var(--font-sans);
-    font-size: 16px;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     overflow-y: auto;
-    line-height: 1.6;
   }
 
   h1, h2, h3, h4 {
     margin: 0;
     font-weight: 700;
-    font-family: var(--font-display);
-    line-height: 1.1;
   }
 }
 
 /* Section Spacing Utilities */
-.section-py {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-@media (min-width: 768px) {
-  .section-py {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-}
 
 .section-container {
   max-width: 1200px;
   margin: 0 auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-
-/* Typography Utilities */
-.heading-xl {
-  font-size: 3.5rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-style: italic;
-  letter-spacing: -0.04em;
-}
-
-@media (min-width: 768px) {
-  .heading-xl {
-    font-size: 5rem;
-  }
-}
-
-.heading-lg {
-  font-size: 2.5rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-style: italic;
-  letter-spacing: -0.04em;
-}
-
-@media (min-width: 768px) {
-  .heading-lg {
-    font-size: 4rem;
-  }
-}
-
-.text-muted-caps {
-  color: var(--ff-muted);
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  letter-spacing: 0.2em;
 }
 
 /* Cyber Design Elements */

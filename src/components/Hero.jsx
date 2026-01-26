@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
     return (
-        <section className="hero-section section-py">
+        <section className="hero-section">
             <div className="hero-glow"></div>
 
             <div className="hero-content px-6">
@@ -13,7 +13,7 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <h1 className="heading-xl mb-6">
+                <h1 className="hero-title">
                     Flip<span className="ff-text-primary cyber-glow-text">Fin</span>
                 </h1>
                 <p className="hero-subtitle mb-12">

@@ -38,11 +38,11 @@ const Header = () => {
 
     return (
         <header className="header">
-            <div className="section-container flex items-center justify-between h-20 md:h-24">
+            <div className="header-container">
                 <div className="flex items-center gap-3">
                     <img src="/logo.png" alt="FlipFin Logo" className="h-10 md:h-12 w-auto" />
                     <div className="flex flex-col">
-                        <span className="logo-text !text-2xl">FlipFin</span>
+                        <span className="logo-text">FlipFin</span>
                         <span className="text-[10px] text-[var(--ff-muted)] uppercase tracking-widest font-bold">Terminal</span>
                     </div>
                 </div>

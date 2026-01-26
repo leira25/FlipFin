@@ -3,11 +3,11 @@ import { Shield, Zap, Target } from 'lucide-react';
 
 const WhyFlip = () => {
     return (
-        <section id="why" className="why-section section-py">
+        <section id="why" className="why-section">
             <div className="section-container">
                 <div className="text-center mb-16 md:mb-24">
-                    <h2 className="heading-lg mb-4">Elite <span className="ff-text-primary">Specs</span></h2>
-                    <p className="text-muted-caps">Engineered for professional Solana traders</p>
+                    <h2 className="section-title">Elite <span className="ff-text-primary">Specs</span></h2>
+                    <p style={{ color: 'var(--ff-muted)', fontWeight: '500', textTransform: 'uppercase', fontSize: '14px', letterSpacing: '0.1em' }}>Engineered for professional Solana traders</p>
                 </div>
 
                 <div className="feature-grid">

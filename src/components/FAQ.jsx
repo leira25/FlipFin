@@ -2,11 +2,11 @@ import React from 'react';
 
 const FAQ = () => {
     return (
-        <section id="faq" className="section-py border-t border-[var(--ff-border)]">
+        <section id="faq" className="tokens-section">
             <div className="section-container max-w-4xl">
                 <div className="text-center mb-16 md:mb-24">
-                    <h2 className="heading-lg mb-4">Terminal <span className="ff-text-primary">Intel</span></h2>
-                    <p className="text-muted-caps">Frequently asked questions</p>
+                    <h2 className="section-title">Terminal <span className="ff-text-primary">Intel</span></h2>
+                    <p style={{ color: 'var(--ff-muted)', fontWeight: '500', textTransform: 'uppercase', fontSize: '14px', letterSpacing: '0.1em' }}>Frequently asked questions</p>
                 </div>
                 
                 <div className="flex flex-col">

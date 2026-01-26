@@ -2,10 +2,10 @@ import React from 'react';
 
 const CTA = () => {
     return (
-        <section className="cta-section section-py">
+        <section className="cta-section">
             <div className="section-container">
                 <div className="cta-box !px-6 md:!px-12">
-                    <h2 className="heading-xl mb-8 !text-black">
+                    <h2 className="cta-title">
                         Stop Missing <br />
                         <span className="bg-black text-[var(--ff-primary)] px-4 py-1 inline-block mt-2">
                             Flips
