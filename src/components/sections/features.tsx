@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';  
 import { Terminal, Zap, BarChart3, Users, Eye, Coins, Rocket, Sparkles } from 'lucide-react';
 
 const Features = () => {
