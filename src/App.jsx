@@ -1,28 +1,18 @@
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import FeaturedTokens from './components/FeaturedTokens';
-import WhyFlip from './components/WhyFlip';
-import HowItWorks from './components/HowItWorks';
-import Documentation from './components/Documentation';
-import CTA from './components/CTA';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
+import Sidebar from './components/sections/Sidebar';
+import Header from './components/sections/Header';
+import TickerBar from './components/sections/ticker-bar';
+import TokenDashboard from './components/sections/token-dashboard';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#0b0e11] text-white">
-      <Header />
-      <main>
-        <Hero />
-        <FeaturedTokens />
-        <WhyFlip />
-        <HowItWorks />
-        <Documentation />
-        <CTA />
-        <FAQ />
-      </main>
-      <Footer />
+    <div className="terminal-layout">
+      <Sidebar />
+      <div className="terminal-content">
+        <TickerBar />
+        <Header />
+        <TokenDashboard />
+      </div>
     </div>
   );
 }
