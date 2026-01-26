@@ -46,12 +46,18 @@ const HeroSection = () => {
             Launch Terminal
           </a>
           <a
-            href="#why"
+            href="#elite-specs"
             className="flex w-full sm:w-auto items-center justify-center border border-[#121e1a] bg-transparent text-white px-[42px] py-[17.5px] rounded-[3.5px] text-[17.5px] font-medium uppercase tracking-wider hover:bg-[#121e1a] transition-all duration-300"
           >
             View Specs
           </a>
         </div>
+        <button
+          onClick={() => navigator.clipboard.writeText("CA: SOON")}
+          className="mt-4 text-sm text-[#94a3b8] font-mono tracking-wider hover:text-white transition-colors cursor-pointer text-left"
+        >
+          CA: SOON
+        </button>
       </div>
 
       {/* Decorative Scanline effect */}

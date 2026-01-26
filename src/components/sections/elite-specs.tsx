@@ -30,7 +30,7 @@ const EliteSpecs = () => {
   ];
 
   return (
-    <section id="why" className="relative py-[120px] bg-[#05080a] overflow-hidden">
+    <section id="elite-specs" className="relative py-[120px] bg-[#05080a] overflow-hidden">
       <div className="container mx-auto px-4 md:px-[21px] max-w-[1280px]">
         {/* Section Header */}
         <div className="text-center mb-16">

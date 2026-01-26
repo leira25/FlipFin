@@ -4,9 +4,10 @@ import { Coins, TrendingUp, Gift, Users, Zap } from 'lucide-react';
 const FlipToken = () => {
   const tokenomics = [
     { label: "Total Supply", value: "1B", sub: "$FLIP" },
-    { label: "Dev Allocation", value: "10%", sub: "Transparent" },
-    { label: "Public Sale", value: "90%", sub: "Fair Launch" },
-    { label: "Liquidity", value: "100%", sub: "Burned Forever" },
+    { label: "Dev Supply", value: "10%", sub: "Transparent" },
+    { label: "Marketing", value: "5%", sub: "Locked Fair" },
+    { label: "Public Sale", value: "85%", sub: "Fair Launch" },
+    // { label: "Liquidity", value: "100%", sub: "Burned Forever" },
   ];
 
   const utility = [
@@ -83,17 +84,31 @@ const FlipToken = () => {
               <p className="text-[#94a3b8] mb-8 max-w-2xl mx-auto">
                 Follow for launch announcements and be the first to know when $FLIP drops on PumpFun.
               </p>
-              <a
-                href="https://x.com/flipfindotfun"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#02c076] to-emerald-400 text-black font-bold text-lg rounded-xl hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(16,185,129,0.3)]"
-              >
-                <span>Follow on X</span>
-                <div className="w-6 h-6 rounded-full bg-black flex items-center justify-center group-hover:bg-white transition-colors">
-                  <TrendingUp size={16} className="text-[#02c076] group-hover:text-black transition-colors" />
-                </div>
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+                <a
+                  href="https://x.com/flipfindotfun"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#02c076] to-emerald-400 text-black font-bold text-lg rounded-xl hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(16,185,129,0.3)]"
+                >
+                  <span>Follow on X</span>
+                  <div className="w-6 h-6 rounded-full bg-black flex items-center justify-center group-hover:bg-white transition-colors">
+                    <TrendingUp size={16} className="text-[#02c076] group-hover:text-black transition-colors" />
+                  </div>
+                </a>
+                <button
+                  
+                  className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#f6465d] to-red-400 text-white font-bold text-lg rounded-xl hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(246,70,93,0.3)]"
+                >
+                <a href="#elite-specs"><span>View Specs</span></a>  
+                  <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center group-hover:bg-[#f6465d] transition-colors">
+                    <Zap size={16} className="text-[#f6465d] group-hover:text-white transition-colors" />
+                  </div>
+                </button>
+              </div>
+              {/* <div className="text-sm text-[#94a3b8] font-mono tracking-wider">
+                CA: SOON
+              </div> */}
             </div>
           </div>
         </div>

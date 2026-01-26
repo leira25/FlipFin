@@ -3,7 +3,7 @@ import { Shield, Zap, Target } from 'lucide-react';
 
 const WhyFlip = () => {
     return (
-        <section id="why" className="why-section bg-[var(--ff-bg)]">
+        <section id="elite-specs" className="why-section bg-[var(--ff-bg)]">
             <div className="section-container">
                 <div className="text-center mb-12 md:mb-16">
                     <h2 className="section-title mb-2">Elite <span className="ff-text-primary cyber-glow-text">Specs</span></h2>
