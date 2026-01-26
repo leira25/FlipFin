@@ -47,12 +47,14 @@ const Header = () => {
                     </div>
                 </div>
 
-                <nav className="hidden md:flex items-center gap-10">
-                    <a href="#featured" className="nav-link font-bold">Market</a>
-                    <a href="#why" className="nav-link font-bold">Features</a>
-                    <a href="#how" className="nav-link font-bold">How it works</a>
-                    <a href="#faq" className="nav-link font-bold">FAQ</a>
-                </nav>
+                {!isMobile && (
+                    <nav className="flex items-center gap-10">
+                        <a href="#featured" className="nav-link font-bold">Market</a>
+                        <a href="#why" className="nav-link font-bold">Features</a>
+                        <a href="#how" className="nav-link font-bold">How it works</a>
+                        <a href="#faq" className="nav-link font-bold">FAQ</a>
+                    </nav>
+                )}
 
                 <div className="flex items-center gap-5">
                     {!isMobile && (
@@ -63,9 +65,11 @@ const Header = () => {
                             Launch App
                         </a>
                     )}
-                    <button className="hamburger" onClick={toggleMenu}>
-                        {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-                    </button>
+                    {isMobile && (
+                        <button className="hamburger" onClick={toggleMenu}>
+                            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                        </button>
+                    )}
                 </div>
             </div>
 

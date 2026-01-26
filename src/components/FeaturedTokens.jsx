@@ -67,56 +67,56 @@ const FeaturedTokens = () => {
     }, []);
 
     return (
-        <section id="featured" className="tokens-section">
-            <div className="container">
-                <div className="section-header">
+        <section id="featured" className="tokens-section section-py">
+            <div className="section-container">
+                <div className="section-header mb-16">
                     <div>
-                        <h2 className="section-title">Live <span className="ff-text-primary">Terminal</span> Feed</h2>
-                        <p style={{ color: 'var(--ff-muted)', fontWeight: '500', textTransform: 'uppercase', fontSize: '14px', letterSpacing: '0.1em' }}>Real-time data from the Solana ecosystem</p>
+                        <h2 className="heading-lg mb-4">Live <span className="ff-text-primary cyber-glow-text">Terminal</span> Feed</h2>
+                        <p className="text-[var(--ff-muted)] font-medium uppercase text-sm tracking-widest">Real-time data from the Solana ecosystem</p>
                     </div>
-                    <div style={{ display: 'flex', gap: '0.5rem' }}>
+                    <div className="flex gap-3">
                         <span className="token-badge">Trending</span>
-                        <span className="token-badge" style={{ backgroundColor: 'var(--ff-secondary)', color: 'var(--ff-muted)', borderColor: 'var(--ff-border)' }}>New</span>
-                        <span className="token-badge" style={{ backgroundColor: 'var(--ff-secondary)', color: 'var(--ff-muted)', borderColor: 'var(--ff-border)' }}>Top Volume</span>
+                        <span className="token-badge bg-[var(--ff-secondary)] text-[var(--ff-muted)] border-[var(--ff-border)]">New</span>
+                        <span className="token-badge bg-[var(--ff-secondary)] text-[var(--ff-muted)] border-[var(--ff-border)]">Top Volume</span>
                     </div>
                 </div>
 
                 <div className="token-grid">
                     {tokens.map((token) => (
-                        <div key={token.id} className="token-card">
+                        <div key={token.id} className="token-card group">
                             {token.live && (
-                                <div style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
-                                    <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'var(--ff-primary)', boxShadow: '0 0 10px var(--ff-primary)' }}></div>
+                                <div className="absolute top-4 right-4">
+                                    <div className="w-2 h-2 rounded-full bg-[var(--ff-primary)] shadow-[0_0_12px_var(--ff-primary)] animate-pulse"></div>
                                 </div>
                             )}
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1.5rem' }}>
-                                <div style={{ flex: 1 }}>
-                                    <h3 style={{ fontWeight: '900', fontSize: '1.75rem', fontStyle: 'italic' }}>{token.symbol}</h3>
-                                    <div className="ff-font-mono" style={{ fontSize: '11px', color: 'var(--ff-muted)', textTransform: 'uppercase' }}>{token.address}</div>
+                            <div className="flex justify-between items-start mb-8">
+                                <div className="flex-1">
+                                    <h3 className="font-black text-3xl italic uppercase leading-none mb-2 group-hover:text-[var(--ff-primary)] transition-colors">{token.symbol}</h3>
+                                    <div className="ff-font-mono text-[11px] text-[var(--ff-muted)] uppercase tracking-tight">{token.address}</div>
                                 </div>
                                 {token.specialLabel ? (
-                                    <span style={{ color: '#fff', fontWeight: '900', fontSize: '1.25rem', fontStyle: 'italic', textTransform: 'uppercase' }}>{token.specialLabel}</span>
+                                    <span className="text-white font-black text-xl italic uppercase">{token.specialLabel}</span>
                                 ) : (
-                                    <span className="ff-font-mono" style={{ color: token.change >= 0 ? 'var(--ff-primary)' : 'var(--ff-secondary-red)', fontWeight: '900', fontSize: '1.5rem' }}>
+                                    <span className={`ff-font-mono font-black text-2xl ${token.change >= 0 ? 'text-[var(--ff-primary)]' : 'text-[var(--ff-red)]'}`}>
                                         {token.change >= 0 ? '+' : ''}{token.change.toLocaleString()}%
                                     </span>
                                 )}
                             </div>
-                            <div className="token-stat-grid">
+                            <div className="token-stat-grid mb-8">
                                 <div>
-                                    <div className="token-stat-label" style={{ fontSize: '11px' }}>Market Cap</div>
-                                    <div className="token-stat-value" style={{ fontSize: '1.5rem' }}>${token.mcap.toLocaleString()}</div>
+                                    <div className="token-stat-label text-[11px] mb-1">Market Cap</div>
+                                    <div className="token-stat-value text-2xl">${token.mcap.toLocaleString()}</div>
                                 </div>
                                 <div>
-                                    <div className="token-stat-label" style={{ fontSize: '11px' }}>{token.volumeLabel || '24H Volume'}</div>
-                                    <div className="token-stat-value" style={{ fontSize: '1.5rem', color: token.volumeLabel === 'Bonding Curve' ? 'var(--ff-primary)' : '#fff' }}>
+                                    <div className="token-stat-label text-[11px] mb-1">{token.volumeLabel || '24H Volume'}</div>
+                                    <div className={`token-stat-value text-2xl ${token.volumeLabel === 'Bonding Curve' ? 'text-[var(--ff-primary)]' : 'text-white'}`}>
                                         {token.volumeLabel === 'Bonding Curve' ? token.volume : (token.volume.startsWith('$') ? token.volume : `$${token.volume}`)}
                                     </div>
                                 </div>
                             </div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                                <span style={{ color: 'var(--ff-muted)' }}>Age: {token.age}</span>
-                                <span style={{ color: token.statusColor, backgroundColor: token.statusBg, padding: '0.25rem 0.75rem', borderRadius: '4px' }}>{token.status}</span>
+                            <div className="flex justify-between items-center text-[11px] font-black uppercase tracking-widest">
+                                <span className="text-[var(--ff-muted)]">Age: {token.age}</span>
+                                <span className="px-3 py-1 rounded bg-[rgba(255,255,255,0.05)] border border-[var(--ff-border)]" style={{ color: token.statusColor, backgroundColor: token.statusBg }}>{token.status}</span>
                             </div>
                         </div>
                     ))}
