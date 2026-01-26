@@ -228,7 +228,7 @@
 
 .hero-section {
   position: relative;
-  padding: 8rem 1.5rem 10rem;
+  padding: 4rem 1.5rem 6rem;
   overflow: hidden;
   text-align: center;
   background-color: var(--bg-main);
@@ -254,25 +254,8 @@
 }
 
 .hero-title {
-  font-size: 5rem;
-  line-height: 0.9;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  font-style: italic;
-  font-family: var(--font-display);
-}
-
-@media (min-width: 768px) {
-  .hero-title {
-    font-size: 7.5rem;
-  }
-}
-
-.section-title {
   font-size: 3.5rem;
-  line-height: 1;
+  line-height: 0.9;
   font-weight: 800;
   letter-spacing: -0.04em;
   margin-bottom: 1rem;
@@ -282,23 +265,40 @@
 }
 
 @media (min-width: 768px) {
-  .section-title {
+  .hero-title {
     font-size: 5.5rem;
   }
 }
 
+.section-title {
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  font-style: italic;
+  font-family: var(--font-display);
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 4rem;
+  }
+}
+
 .hero-subtitle {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--ff-muted);
-  max-width: 40rem;
-  margin: 0 auto 3.5rem;
-  line-height: 1.5;
+  max-width: 36rem;
+  margin: 0 auto 2.5rem;
+  line-height: 1.4;
   font-weight: 400;
 }
 
 @media (min-width: 768px) {
   .hero-subtitle {
-    font-size: 1.35rem;
+    font-size: 1.15rem;
   }
 }
 
@@ -323,22 +323,22 @@
 }
 
 .stat-item {
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1rem;
   text-align: center;
   position: relative;
 }
 
 .stat-label {
-  font-size: 10px;
+  font-size: 9px;
   color: var(--ff-muted);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .stat-value {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   font-family: var(--font-mono);
 }
@@ -346,7 +346,7 @@
 /* Featured Tokens */
 .tokens-section {
   background-color: var(--ff-bg);
-  padding: 8rem 0;
+  padding: 4rem 0;
   border-top: 1px solid var(--ff-border);
   position: relative;
 }
@@ -354,8 +354,8 @@
 .section-header {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 5rem;
+  gap: 1rem;
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 768px) {
@@ -367,12 +367,12 @@
 }
 
 .token-badge {
-  padding: 0.25rem 0.75rem;
+  padding: 0.2rem 0.6rem;
   background-color: rgba(2, 192, 118, 0.1);
   color: var(--ff-primary);
   border: 1px solid rgba(2, 192, 118, 0.3);
   border-radius: 4px;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -381,7 +381,7 @@
 .token-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -394,22 +394,22 @@
   background-color: var(--ff-card);
   border: 1px solid var(--ff-border);
   border-radius: 0.5rem;
-  padding: 2rem;
+  padding: 1.5rem;
   position: relative;
   transition: all var(--transition-fast);
 }
 
 .token-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   border-color: var(--ff-primary);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 }
 
 .token-stat-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 480px) {
@@ -419,23 +419,23 @@
 }
 
 .token-stat-label {
-  font-size: 10px;
+  font-size: 9px;
   color: var(--ff-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   font-weight: 600;
 }
 
 .token-stat-value {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
   font-family: var(--font-mono);
 }
 
 /* Why Flip Section */
 .why-section {
-  padding: 10rem 0;
+  padding: 5rem 0;
   border-top: 1px solid var(--ff-border);
   background-color: var(--bg-main);
 }
@@ -443,7 +443,7 @@
 .feature-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -455,8 +455,8 @@
 .feature-card {
   background-color: var(--ff-card);
   border: 1px solid var(--ff-border);
-  border-radius: 1rem;
-  padding: 4rem 3rem;
+  border-radius: 0.75rem;
+  padding: 2.5rem 2rem;
   transition: all var(--transition-fast);
   position: relative;
 }
@@ -467,81 +467,81 @@
 }
 
 .feature-icon {
-  width: 5rem;
-  height: 5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   background-color: rgba(2, 192, 118, 0.1);
   color: var(--ff-primary);
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   border: 1px solid rgba(2, 192, 118, 0.2);
 }
 
 .feature-title {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 800;
   font-style: italic;
   text-transform: uppercase;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   font-family: var(--font-display);
 }
 
 /* How It Works Section */
 .how-section {
-  padding: 10rem 0;
+  padding: 5rem 0;
   border-top: 1px solid var(--ff-border);
   background-color: var(--ff-card);
 }
 
 .step-number {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 900;
   font-style: italic;
   color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
   line-height: 1;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 /* CTA Section */
 .cta-section {
-  padding: 10rem 0;
+  padding: 5rem 0;
   background-color: var(--ff-bg);
 }
 
 .cta-box {
   background-color: var(--ff-primary);
-  padding: 8rem 2rem;
-  border-radius: 1.5rem;
+  padding: 4rem 1.5rem;
+  border-radius: 1rem;
   text-align: center;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 40px 100px rgba(2, 192, 118, 0.15);
+  box-shadow: 0 20px 50px rgba(2, 192, 118, 0.1);
 }
 
 .cta-title {
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 1;
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
   color: #000;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   letter-spacing: -0.04em;
 }
 
 @media (min-width: 768px) {
   .cta-title {
-    font-size: 7rem;
+    font-size: 5rem;
   }
 }
 
 /* FAQ Section */
 .faq-item {
   border-bottom: 1px solid var(--ff-border);
-  padding: 1.5rem 0;
+  padding: 1.25rem 0;
 }
 
 .faq-question {
@@ -557,17 +557,17 @@
 }
 
 .faq-answer {
-  padding-top: 1.5rem;
+  padding-top: 1.25rem;
   color: var(--ff-muted);
-  line-height: 1.7;
-  font-size: 1rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
   max-width: 48rem;
 }
 
 /* Footer Section */
 .footer {
   background-color: var(--ff-bg);
-  padding: 10rem 0 5rem;
+  padding: 5rem 0 3rem;
   border-top: 1px solid var(--ff-border);
   position: relative;
 }
@@ -579,7 +579,7 @@
   transform: translateX(-50%);
   width: 100%;
   max-width: 80rem;
-  height: 30rem;
+  height: 20rem;
   background: radial-gradient(circle, rgba(2, 192, 118, 0.05) 0%, transparent 70%);
   pointer-events: none;
 }
@@ -596,14 +596,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2.5rem;
-  margin-bottom: 5rem;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .footer-link {
   color: var(--ff-muted);
   text-decoration: none;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -616,12 +616,12 @@
 }
 
 .footer-bottom {
-  padding-top: 4rem;
+  padding-top: 3rem;
   border-top: 1px solid var(--ff-border);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
