@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './components/sections/header';
+import Header from './components/sections/Header';
 import Hero from './components/sections/hero';
 import HowItWorks from './components/sections/how-it-works';
 import EliteSpecs from './components/sections/elite-specs';
