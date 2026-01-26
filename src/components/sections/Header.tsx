@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Twitter, MessageSquare } from "lucide-react";
 
 /**
  * Header component for the FlipFin Solana Trading Terminal.
@@ -63,6 +63,26 @@ export default function Header() {
 
         {/* Actions Section */}
         <div className="flex items-center gap-4">
+          {/* Social Buttons */}
+          <div className="hidden md:flex items-center gap-2">
+            <a
+              href="https://x.com/flipfindotfun"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-8 h-8 rounded-[3.5px] border border-[#121e1a] bg-transparent hover:border-[#10b981] transition-all hover:shadow-[0_0_10px_rgba(16,185,129,0.3)]"
+            >
+              <Twitter size={16} className="text-[#9ca3af] hover:text-[#10b981] transition-colors" />
+            </a>
+            <a
+              href="https://t.me/flipfin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-8 h-8 rounded-[3.5px] border border-[#121e1a] bg-transparent hover:border-[#10b981] transition-all hover:shadow-[0_0_10px_rgba(16,185,129,0.3)]"
+            >
+              <MessageSquare size={16} className="text-[#9ca3af] hover:text-[#10b981] transition-colors" />
+            </a>
+          </div>
+
           <a
             href="https://flipfin.fun/"
             className="group relative hidden md:flex h-[32px] items-center justify-center rounded-[3.5px] bg-[#10b981] px-[21px] text-[12.25px] font-bold uppercase transition-all hover:bg-[#0ea271] hover:shadow-[0_0_15px_rgba(16,185,129,0.4)]"
@@ -123,6 +143,26 @@ export default function Header() {
           >
             Launch Terminal
           </a>
+          
+          {/* Mobile Social Buttons */}
+          <div className="flex justify-center gap-4 mt-6">
+            <a
+              href="https://x.com/flipfindotfun"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-12 h-12 rounded-[4px] border border-[#121e1a] bg-transparent hover:border-[#10b981] transition-all"
+            >
+              <Twitter size={20} className="text-[#9ca3af] hover:text-[#10b981] transition-colors" />
+            </a>
+            <a
+              href="https://t.me/flipfin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-12 h-12 rounded-[4px] border border-[#121e1a] bg-transparent hover:border-[#10b981] transition-all"
+            >
+              <MessageSquare size={20} className="text-[#9ca3af] hover:text-[#10b981] transition-colors" />
+            </a>
+          </div>
         </nav>
       </div>
 

@@ -25,7 +25,7 @@ const Footer = () => {
           {/* Social & Doc Links */}
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-16">
             <a 
-              href="https://twitter.com/i/communities/2013802185507889401" 
+              href="https://x.com/flipfindotfun" 
               className="text-[12px] font-mono text-muted-foreground hover:text-neon-green transition-colors uppercase tracking-widest"
               target="_blank"
               rel="noopener noreferrer"
@@ -47,6 +47,14 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               Documentation
+            </a>
+            <a 
+              href="mailto:contact@flipfin.fun" 
+              className="text-[12px] font-mono text-muted-foreground hover:text-neon-green transition-colors uppercase tracking-widest"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Email
             </a>
             <a 
               href="#" 
