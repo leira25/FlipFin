@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, X, Twitter, MessageSquare } from "lucide-react";
+import { Menu, X, Twitter, Send } from "lucide-react";
 
 /**
  * Header component for the FlipFin Solana Trading Terminal.
@@ -74,12 +74,10 @@ export default function Header() {
               <Twitter size={16} className="text-[#9ca3af] hover:text-[#10b981] transition-colors" />
             </a>
             <a
-              href="https://t.me/flipfin"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#"
               className="flex items-center justify-center w-8 h-8 rounded-[3.5px] border border-[#121e1a] bg-transparent hover:border-[#10b981] transition-all hover:shadow-[0_0_10px_rgba(16,185,129,0.3)]"
             >
-              <MessageSquare size={16} className="text-[#9ca3af] hover:text-[#10b981] transition-colors" />
+              <Send size={16} className="text-[#9ca3af] hover:text-[#10b981] transition-colors" />
             </a>
           </div>
 
@@ -155,12 +153,10 @@ export default function Header() {
               <Twitter size={20} className="text-[#9ca3af] hover:text-[#10b981] transition-colors" />
             </a>
             <a
-              href="https://t.me/flipfin"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#"
               className="flex items-center justify-center w-12 h-12 rounded-[4px] border border-[#121e1a] bg-transparent hover:border-[#10b981] transition-all"
             >
-              <MessageSquare size={20} className="text-[#9ca3af] hover:text-[#10b981] transition-colors" />
+              <Send size={20} className="text-[#9ca3af] hover:text-[#10b981] transition-colors" />
             </a>
           </div>
         </nav>
