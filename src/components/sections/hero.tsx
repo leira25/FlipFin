@@ -53,10 +53,10 @@ const HeroSection = () => {
           </a>
         </div>
         <button
-          onClick={() => navigator.clipboard.writeText("CA: SOON")}
+          onClick={() => navigator.clipboard.writeText("DUkYuJ1gxHSuYh1Dky3CaGtawLCDWsqx7KVgLwCtpump")}
           className="mt-4 text-sm text-[#94a3b8] font-mono tracking-wider hover:text-white transition-colors cursor-pointer text-left"
         >
-          CA: SOON!
+          CA: DUkYuJ1gxHSuYh1Dky3CaGtawLCDWsqx7KVgLwCtpump
         </button>
       </div>
 
