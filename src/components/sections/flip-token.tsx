@@ -4,9 +4,9 @@ import { Coins, TrendingUp, Gift, Users, Zap } from 'lucide-react';
 const FlipToken = () => {
   const tokenomics = [
     { label: "Total Supply", value: "1B", sub: "$FLIP" },
-    { label: "Dev Supply", value: "10%", sub: "Transparent" },
+    { label: "Dev Supply", value: "5%", sub: "Transparent" },
     { label: "Marketing", value: "5%", sub: "Locked Fair" },
-    { label: "Public Sale", value: "85%", sub: "Fair Launch" },
+    { label: "Public Sale", value: "90%", sub: "Fair Launch" },
     // { label: "Liquidity", value: "100%", sub: "Burned Forever" },
   ];
 
