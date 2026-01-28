@@ -106,7 +106,7 @@ const FeaturesShowcase = () => {
               Ready to level up your trading?
             </span>
               <a
-              href="https://qa.flipfin.fun/"
+              href="https://flipfin.fun/"
               className="group relative flex h-[36px] items-center justify-center rounded-full bg-[#10b981] px-6 text-sm font-bold uppercase text-black transition-all hover:bg-[#0ea271] hover:shadow-[0_0_20px_rgba(16,185,129,0.5)]"
             >
               <span className="relative z-10">Launch Terminal</span>

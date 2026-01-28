@@ -103,7 +103,7 @@ const Privacy = () => {
                 your keys stay yours, and your privacy stays protected.
               </p>
               <a
-                href="https://qa.flipfin.fun/"
+                href="https://flipfin.fun/"
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#8b5cf6] to-violet-400 text-black font-bold text-lg rounded-xl hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(139,92,246,0.3)]"
               >
                 <span>Start Private Trading</span>

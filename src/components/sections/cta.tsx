@@ -40,7 +40,7 @@ const CTASection = () => {
 
           {/* Black Button */}
           <a 
-            href="https://qa.flipfin.fun/"
+            href="https://flipfin.fun/"
             className="relative z-10 ff-btn flex items-center justify-center bg-[#05080a] text-[#ffffff] px-10 py-5 rounded-[4px] text-[15px] font-bold uppercase italic tracking-widest hover:scale-[1.02] transition-transform duration-200"
           >
             Launch Terminal Now

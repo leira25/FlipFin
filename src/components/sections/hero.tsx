@@ -40,7 +40,7 @@ const HeroSection = () => {
         {/* Dual Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-[16px] md:gap-[21px] w-full sm:w-auto px-6">
           <a
-            href="https://qa.flipfin.fun/"
+            href="https://flipfin.fun/"
             className="flex w-full sm:w-auto items-center justify-center bg-[#10b981] text-[#05080a] px-[42px] py-[17.5px] rounded-[3.5px] text-[17.5px] font-bold uppercase tracking-wider hover:bg-[#0da673] transition-all duration-300 shadow-[0_0_20px_rgba(16,185,129,0.3)]"
           >
             Launch Terminal

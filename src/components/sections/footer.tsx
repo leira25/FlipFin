@@ -43,7 +43,7 @@ const Footer = () => {
               Discord
             </a>
             <a 
-              href="https://qa.flipfin.fun/docs"
+              href="https://flipfin.fun/docs"
               className="text-[12px] font-mono text-muted-foreground hover:text-neon-green transition-colors uppercase tracking-widest"
               target="_blank"
               rel="noopener noreferrer"

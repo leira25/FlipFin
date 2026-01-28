@@ -14,7 +14,7 @@ const CTA = () => {
                     <p className="mb-8 text-black font-black uppercase italic text-lg md:text-xl opacity-90 leading-tight max-w-xl mx-auto">
                         Join thousands spotting 10×–100× plays daily on Solana. Free to start — edge included.
                     </p>
-                    <a href="https://qa.flipfin.fun/"
+                    <a href="https://flipfin.fun/"
                         className="ff-btn bg-black text-[var(--ff-primary)] px-8 py-4 text-xl md:text-2xl shadow-[0_15px_40px_rgba(0,0,0,0.3)] hover:scale-105 transition-transform">
                         Launch Terminal
                     </a>
