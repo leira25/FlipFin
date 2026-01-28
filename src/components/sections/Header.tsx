@@ -97,7 +97,7 @@ export default function Header() {
           </div>
 
           <a
-            href="https://flipfin.fun/"
+            href="https://qa.flipfin.fun/"
             className="group relative hidden md:flex h-[32px] items-center justify-center rounded-[3.5px] bg-[#10b981] px-[21px] text-[12.25px] font-bold uppercase transition-all hover:bg-[#0ea271] hover:shadow-[0_0_15px_rgba(16,185,129,0.4)]"
             style={{ color: "#000000" }}
           >
