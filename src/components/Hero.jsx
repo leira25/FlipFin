@@ -21,7 +21,7 @@ const Hero = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="https://flipfin.fun/" className="ff-btn ff-btn-primary px-8 py-3.5 text-base w-full sm:w-auto min-w-[200px]">
+                    <a href="https://qa.flipfin.fun/" className="ff-btn ff-btn-primary px-8 py-3.5 text-base w-full sm:w-auto min-w-[200px]">
                         Launch Terminal
                     </a>
                     <a href="#why" className="ff-btn ff-btn-secondary px-8 py-3.5 text-base w-full sm:w-auto min-w-[200px]">

@@ -74,8 +74,8 @@ const Features = () => {
                 Join thousands of professional traders who trust FlipFin for their Solana trading needs. 
                 Fast, secure, and built for maximum alpha extraction.
               </p>
-              <a
-                href="https://flipfin.fun/"
+            <a
+                href="https://qa.flipfin.fun/"
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#10b981] to-emerald-400 text-black font-bold text-lg rounded-xl hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(16,185,129,0.3)]"
               >
                 <span>Launch Terminal</span>

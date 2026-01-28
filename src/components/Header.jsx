@@ -46,7 +46,7 @@ const Header = () => {
                 <div className="flex items-center gap-5">
                     <div className="hidden md:flex items-center gap-5">
                         <a
-                            href="https://flipfin.fun/"
+                            href="https://qa.flipfin.fun/"
                             className="ff-btn ff-btn-primary px-6 py-2.5 text-sm"
                         >
                             Launch App
@@ -65,7 +65,7 @@ const Header = () => {
                 <a href="#how" className="mobile-menu-link" onClick={toggleMenu}>How it works</a>
                 <a href="#faq" className="mobile-menu-link" onClick={toggleMenu}>FAQ</a>
                 <a
-                    href="https://flipfin.fun/"
+                    href="https://qa.flipfin.fun/"
                     className="ff-btn ff-btn-primary"
                     style={{ padding: '0.5rem 1.5rem', fontSize: '0.875rem' }}
                 >

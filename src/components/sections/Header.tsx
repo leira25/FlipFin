@@ -66,7 +66,7 @@ export default function Header() {
         {/* Social Buttons */}
           <div className="hidden md:flex items-center gap-2">
             <a
-              href="https://flipfin.fun/docs"
+              href="https://qa.flipfin.fun/docs"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-[12.25px] font-medium uppercase tracking-wider text-[#9ca3af] transition-colors hover:text-[#10b981]"
@@ -159,7 +159,7 @@ export default function Header() {
             FAQ
           </a>
           <a
-            href="https://flipfin.fun/docs"
+            href="https://qa.flipfin.fun/docs"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsMenuOpen(false)}
@@ -168,7 +168,7 @@ export default function Header() {
             Docs
           </a>
           <a
-            href="https://flipfin.fun/"
+            href="https://qa.flipfin.fun/"
             className="mt-8 flex h-[60px] items-center justify-center rounded-[4px] bg-[#10b981] text-lg font-black uppercase italic tracking-tighter text-[#05080a]"
           >
             Launch Terminal

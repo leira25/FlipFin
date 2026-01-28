@@ -79,7 +79,7 @@ const TermsOfService = () => {
                 Trade responsibly and understand the risks involved.
               </p>
               <a
-                href="https://flipfin.fun/"
+                href="https://qa.flipfin.fun/"
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#6b7280] to-gray-400 text-black font-bold text-lg rounded-xl hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(107,114,128,0.3)]"
               >
                 <span>Start Trading</span>

@@ -83,7 +83,7 @@ const Rewards = () => {
                 Every trade counts. Every referral multiplies your rewards. Get ready for the biggest airdrop in Solana trading.
               </p>
               <a
-                href="https://flipfin.fun/"
+                href="https://qa.flipfin.fun/"
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#f6465d] to-rose-400 text-black font-bold text-lg rounded-xl hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(246,70,93,0.3)]"
               >
                 <span>Start Trading Now</span>

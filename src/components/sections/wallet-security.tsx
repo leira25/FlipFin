@@ -99,7 +99,7 @@ const WalletSecurity = () => {
                 Experience the freedom of true DeFi trading. Your keys, your crypto, your complete control.
               </p>
               <a
-                href="https://flipfin.fun/"
+                href="https://qa.flipfin.fun/"
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#3b82f6] to-cyan-400 text-black font-bold text-lg rounded-xl hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.3)]"
               >
                 <span>Start Secure Trading</span>

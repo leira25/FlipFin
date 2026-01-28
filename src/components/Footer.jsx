@@ -16,7 +16,7 @@ const Footer = () => {
                 <div className="footer-links">
                     <a href="https://twitter.com/i/communities/2013802185507889401" target="_blank" rel="noopener noreferrer" className="footer-link">Twitter</a>
                     <a href="https://t.me/flipfin" target="_blank" rel="noopener noreferrer" className="footer-link">Telegram</a>
-                    <a href="https://flipfin.fun/docs" target="_blank" rel="noopener noreferrer" className="footer-link">Documentation</a>
+                    <a href="https://qa.flipfin.fun/docs" target="_blank" rel="noopener noreferrer" className="footer-link">Documentation</a>
                     <a href="#" className="footer-link">Terms of Service</a>
                 </div>
 
