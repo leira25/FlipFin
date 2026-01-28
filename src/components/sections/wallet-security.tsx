@@ -7,7 +7,7 @@ const WalletSecurity = () => {
     { icon: <Eye size={24} />, title: "No Tracking", desc: "We don't collect personal data, IPs, or identification info." },
     { icon: <Shield size={24} />, title: "Direct Transactions", desc: "Sign transactions locally - nothing goes through our servers." },
   ];
-
+// comment
   const bestPractices = [
     "Backup your private key in multiple secure locations",
     "Never share your key with anyone - we will never ask for it",
